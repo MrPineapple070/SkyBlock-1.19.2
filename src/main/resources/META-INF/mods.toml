@@ -1,0 +1,33 @@
+modLoader="javafml"
+loaderVersion="[43,)"
+license="APGL v3"
+issueTrackerURL="https://www.google.com/"
+
+[[mods]]
+modId="skyblock"
+version="${file.jarVersion}"
+displayName="SkyBlock Mod"
+#updateJSONURL="https://change.me.example.invalid/updates.json"
+displayURL="https://wiki.hypixel.net/Main_Page"
+logoFile="logo.png"
+credits="Hypixel"
+authors="Hypixel"
+displayTest="MATCH_VERSION"
+description='''
+Hypixel's SkyBlock for Minecraft Forge
+'''
+
+
+[[dependencies.examplemod]] #optional
+    modId="forge" #mandatory
+    mandatory=true #mandatory
+    versionRange="[43,)" #mandatory
+    ordering="NONE"
+    side="BOTH"
+    
+[[dependencies.examplemod]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.19.2,1.20)"
+    ordering="NONE"
+    side="BOTH"
