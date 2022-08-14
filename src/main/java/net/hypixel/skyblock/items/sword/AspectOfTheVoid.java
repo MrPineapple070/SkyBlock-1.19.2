@@ -18,18 +18,18 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 
-public class AspectOfTheEnd extends ModSwordItem {
+public class AspectOfTheVoid extends ModSwordItem {
 	private static final List<Component> tooltip = Arrays.asList(
-			item_ability.copy().append(Component.translatable("sword.aote")).withStyle(ChatFormatting.GOLD),
-			Component.translatable("sword.aote.0", StatString.speed).withStyle(ChatFormatting.GRAY));
+			item_ability.copy().append(Component.translatable("sword.aotv")).withStyle(ChatFormatting.GOLD),
+			Component.translatable("sword.aotv.0", StatString.speed).withStyle(ChatFormatting.GRAY));
 
-	public AspectOfTheEnd() {
-		super(ModSwordTier.AOTE, ItemProperties.combat_1, Rarity.Rare);
+	public AspectOfTheVoid() {
+		super(ModSwordTier.AOTV, ItemProperties.combat_1, Rarity.Epic);
 	}
 
 	@Override
 	public void appendHoverText(ItemStack stack, Level level, List<Component> tooltip, TooltipFlag flag) {
-		tooltip.addAll(AspectOfTheEnd.tooltip);
+		tooltip.addAll(AspectOfTheVoid.tooltip);
 	}
 
 	@Override
@@ -40,9 +40,10 @@ public class AspectOfTheEnd extends ModSwordItem {
 
 		final double yaw = player.yHeadRot * Math.PI / 180d, pitch = player.getXRot() * Math.PI / 180d;
 		final double cos = Math.cos(pitch);
+		final boolean crouch = player.isCrouching();
 		final Vec3 player_pos = player.position();
 		final Vec3 facing = new Vec3(-1 * Math.sin(yaw) * cos, -1 * Math.sin(pitch), Math.cos(yaw) * cos);
-		final Vec3 teleport = facing.scale(8d).add(player_pos);
+		final Vec3 teleport = facing.scale(crouch ? 64d : 8d).add(player_pos);
 
 		player.moveTo(teleport.x, teleport.y, teleport.z, player.getYRot(), player.getXRot());
 		level.playSound(player, player.getX(), player.getY(), player.getZ(), SoundEvents.ENDERMAN_TELEPORT,

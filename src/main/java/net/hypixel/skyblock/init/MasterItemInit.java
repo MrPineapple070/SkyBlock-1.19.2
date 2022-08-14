@@ -11,6 +11,7 @@ public class MasterItemInit {
 
 		SkyblockMod.LOGGER.debug("Registering items");
 		ItemInit.ITEMS.register(bus);
+		GemstoneInit.GEMSTONE.register(bus);
 		SwordInit.SWORDS.register(bus);
 	}
 }

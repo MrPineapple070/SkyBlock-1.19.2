@@ -36,7 +36,7 @@ public abstract class ModSwordItem extends SwordItem {
 	private Rarity rarity;
 
 	public ModSwordItem(Tier tier, Properties properties, Rarity rarity) {
-		super(tier, -1, Float.POSITIVE_INFINITY, properties);
+		super(tier, 0, Float.POSITIVE_INFINITY, properties);
 		this.rarity = Objects.requireNonNull(rarity, "Rarity cannot be null");
 	}
 

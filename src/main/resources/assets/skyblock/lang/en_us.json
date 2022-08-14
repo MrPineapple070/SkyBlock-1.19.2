@@ -132,13 +132,6 @@
 	"item.skyblock.golden_plate": "Golden Plate",
 	"item.skyblock.mithril_plate": "Mithril Plate",
 	"item.skyblock.gemstone_mixture": "Gemstone Mixture",
-	"item.skyblock.perfect_jasper": "Perfect Jasper Gemstone",
-	"item.skyblock.perfect_ruby": "Perfect Ruby Gemstone",
-	"item.skyblock.perfect_jade": "Perfect Jade Gemstone",
-	"item.skyblock.perfect_sapphire": "Perfect Sapphire Gemstone",
-	"item.skyblock.perfect_amber": "Perfect Amber",
-	"item.skyblock.perfect_topaz": "Perfect Topaz",
-	"item.skyblock.perfect_amethyst": "Perfect Amethyst",
 	"item.skyblock.power_crystal": "Power Crystal",
 	"item.skyblock.pesto_goblin_omelette": "Pesto Goblin Omelette",
 	"item.skyblock.goblin_omelette": "Goblin Omelette",
@@ -146,7 +139,6 @@
 	"item.skyblock.spicy_goblin_omelette": "Spicy Goblin Omellete",
 	"item.skyblock.gemstone_chamber": "Gemstone Chamber",
 	"item.skyblock.blue_cheese_goblin_omelette": "Blue Cheese Goblin Omelette",
-
 	
 	"item.skyblock.auto_recombobulator": "Auto Recombobulator",
 	"item.skyblock.bait_ring": "Bait Ring",
@@ -305,7 +297,6 @@
 	"item.skyblock.zombie_ring": "Zombie Ring",
 	"item.skyblock.zombie_talisman": "Zombie Talisman",
 
-	
 	"item.skyblock.blessed_bait": "Blessed Bait",
 	"item.skyblock.carrot_bait": "Carrot Bait",
 	"item.skyblock.dark_bait": "Dark Bait",
@@ -316,7 +307,6 @@
 	"item.skyblock.spiked_bait": "Spiked Bait",
 	"item.skyblock.spooky_bait": "Spooky Bait",
 	"item.skyblock.whale_bait": "Whale Bait",
-
 	
 	"item.skyblock.birch_forest_biome_stick": "Birch Forest Biome Stick",
 	"item.skyblock.deep_ocean_biome_stick": "Deep Ocean Biome Stick",
@@ -328,7 +318,6 @@
 	"item.skyblock.roofed_forest_biome_stick": "Roofed Forest Biome Stick",
 	"item.skyblock.savanna_biome_stick": "Savanna Biome Stick",
 	"item.skyblock.taiga_biome_stick": "Taiga Biome Stick",
-
 	
 	"item.skyblock.rookie_pickaxe": "Rookie Pickaxe",
 	"item.skyblock.promising_pickaxe": "Promising Pickaxe",
@@ -344,7 +333,6 @@
 	"item.skyblock.promising_shovel": "Promising Shovel",
 	"item.skyblock.flint_shovel": "Flint Shovel",
 	"item.skyblock.rookie_hoe": "Rookie How",
-
 	
 	"item.skyblock.mithril_drill_1": "Mithril Drill SX-R226",
 	"item.skyblock.mithril_drill_2": "Mithril Drill SX-R326",
@@ -357,7 +345,6 @@
 	"item.skyblock.topaz_drill": "Topaz Drill KGR-12",
 	"item.skyblock.jasper_drill": "Jasper Drill Model X",
 	"item.skyblock.divan_drill": "Divan's Drill",
-
 	
 	"item.skyblock.prismarine_rod": "Prismarine Rod",
 	"item.skyblock.sponge_rod": "Sponge Rod",
@@ -371,7 +358,6 @@
 	"item.skyblock.rod_of_legends": "Rod of Legends",
 	"item.skyblock.yeti_rod": "Yeti Rod",
 	"item.skyblock.shredder": "Shredder",
-
 	
 	"item.skyblock.aspect_of_the_dragons": "Aspect of the Dragons",
 	"item.skyblock.aspect_of_the_end": "Aspect of the End",
@@ -425,7 +411,6 @@
 	"item.skyblock.woidwalker_katana": "Voidwalker Katana",
 	"item.skyblock.yeti_sword": "Yeti Sword",
 	"item.skyblock.zombie_sword": "Zombie Sword",
-
 	
 	"item.skyblock.adaptive_blade": "Adaptive Blade",
 	"item.skyblock.astrea": "Astrea",
@@ -454,7 +439,6 @@
 	"item.skyblock.zombie_commander_whip": "Zombie Commander Whip",
 	"item.skyblock.zombie_knight_sword": "Zombie Knight Sword",
 	"item.skyblock.zombie_soldier_cutlass": "Zombie Soldier Cutlass",
-
 	
 	"item.skyblock.bonemerang": "Bonemerang",
 	"item.skyblock.death_bow": "Death Bow",
@@ -484,7 +468,6 @@
 	"item.skyblock.undead_bow": "Undead Bow",
 	"item.skyblock.venom_touch": "Venom's Touch",
 	"item.skyblock.wither_bow": "Wither Bow",
-
 	
 	"item.skyblock.angler_helmet": "Angler Helmet",
 	"item.skyblock.angler_chestplate": "Angler Chestplate",
@@ -856,7 +839,6 @@
 	"item.skyblock.zombie_soldier_chestplate": "Zombie Soldier Chestplate",
 	"item.skyblock.zombie_soldier_leggings": "Zombie Soldier Leggings",
 	"item.skyblock.zombie_soldier_boots": "Zombie Soldier Boots",
-
 	
 	"item.skyblock.blaze_hat": "Blaze Hat",
 	"item.skyblock.blobfish_hat": "Blobfish Hat",
@@ -894,7 +876,6 @@
 	"item.skyblock.witch_mask": "Witch Mask",
 	"item.skyblock.zombie_hat": "Zombie Hat",
 	"item.skyblock.zombie_heart": "Zombie's Heart",
-
 	
 	"item.skyblock.bonzo_helmet": "Bonzo's Helmet",
 	"item.skyblock.dark_goggles": "Dark Goggles",
@@ -919,28 +900,23 @@
 	"item.skyblock.shadow_goggles": "Shadow Goggles",
 	"item.skyblock.sniper_helmet": "Sniper Helmet",
 	"item.skyblock.wither_goggles": "Wither Goggles",
-
 	
 	"item.skyblock.guardian_chestplate": "Guardian Chestplate",
 	"item.skyblock.mithril_coat": "Mithril Coat",
 	"item.skyblock.obsidian_chestplate": "Obsidian Chestplate",
-
 	
 	"item.skyblock.metal_chestplate": "Metal Chestplate",
 	"item.skyblock.steel_chestplate": "Steel Chestplate",
 	"item.skyblock.stone_chestplate": "Stone Chestplate",
-
 	
 	"item.skyblock.creeper_pants": "Creeper Pants",
 	"item.skyblock.stereo_pants": "Stereo Pants",
-
 	
 	"item.skyblock.farmer_boots": "Farmer Boots",
 	"item.skyblock.rancher_boots": "Rancher's Boots",
 	"item.skyblock.spider_boots": "Spider's Boots",
 	"item.skyblock.spirit_boots": "Spirit Boots",
 	"item.skyblock.squid_boots": "Squid Boots",
-
 	
 	"item.skyblock.baby_yeti_pet": "Baby Yeti Pet",
 	"item.skyblock.bat_pet": "Bat Pet",
@@ -987,9 +963,7 @@
 	"item.skyblock.wolf_pet": "Wolf Pet",
 	"item.skyblock.zombie_pet": "Zombie Pet",
 
-	
 	"item.skyblock.close": "Close",
-
 	
 	"item.skyblock.small_backpack": "Small Backpack",
 	"item.skyblock.white_small_backpack": "White Small Backpack",
@@ -1080,6 +1054,47 @@
 	"item.skyblock.green_jumbo_backpack": "Green Jumbo Backpack",
 	"item.skyblock.red_jumbo_backpack": "Red Jumbo Backpack",
 	"item.skyblock.black_jumbo_backpack": "Black Jumbo Backpack",
+
+	"item.skyblock.fine_amber": "⛏ Fine Amber Gemstone",
+	"item.skyblock.fine_amethyst": "❈ Fine Amethyst Gemstone",
+	"item.skyblock.fine_jade": "☘ Fine Jade Gemstone",
+	"item.skyblock.fine_jasper": "❁ Fine Jasper Gemstone",
+	"item.skyblock.fine_opal" : "❂ Fine Opal Gemstone",
+	"item.skyblock.fine_ruby": "❤ Fine Ruby Gemstone",
+	"item.skyblock.fine_sapphire": "✎ Fine Sapphire Gemstone",
+	"item.skyblock.fine_topaz": "✧ Fine Topaz Gemstone",
+	"item.skyblock.flawed_amber": "⛏ Flawed Amber Gemstone",
+	"item.skyblock.flawed_amethyst": "❈ Flawed Amethyst Gemstone",
+	"item.skyblock.flawed_jade": "☘ Flawed Jade Gemstone",
+	"item.skyblock.flawed_jasper": "❁ Flawed Jasper Gemstone",
+	"item.skyblock.flawed_opal" : "❂ Flawed Opal Gemstone",
+	"item.skyblock.flawed_ruby": "❤ Flawed Ruby Gemstone",
+	"item.skyblock.flawed_sapphire": "✎ Flawed Sapphire Gemstone",
+	"item.skyblock.flawed_topaz": "✧ Flawed Topaz Gemstone",
+	"item.skyblock.flawless_amber": "⛏ Flawless Amber Gemstone",
+	"item.skyblock.flawless_amethyst": "❈ Flawless Amethyst Gemstone",
+	"item.skyblock.flawless_jade": "☘ Flawless Jade Gemstone",
+	"item.skyblock.flawless_jasper": "❁ Flawless Jasper Gemstone",
+	"item.skyblock.flawless_opal" : "❂ Flawless Opal Gemstone",
+	"item.skyblock.flawless_ruby": "❤ Flawless Ruby Gemstone",
+	"item.skyblock.flawless_sapphire": "✎ Flawless Sapphire Gemstone",
+	"item.skyblock.flawless_topaz": "✧ Flawless Topaz Gemstone",
+	"item.skyblock.perfect_amber": "⛏ Perfect Amber Gemstone",
+	"item.skyblock.perfect_amethyst": "❈ Perfect Amethyst Gemstone",
+	"item.skyblock.perfect_jade": "☘ Perfect Jade Gemstone",
+	"item.skyblock.perfect_jasper": "❁ Perfect Jasper Gemstone",
+	"item.skyblock.perfect_opal" : "❂ Perfect Opal Gemstone",
+	"item.skyblock.perfect_ruby": "❤ Perfect Ruby Gemstone",
+	"item.skyblock.perfect_sapphire": "✎ Perfect Sapphire Gemstone",
+	"item.skyblock.perfect_topaz": "✧ Perfect Topaz Gemstone",
+	"item.skyblock.rough_amber": "⛏ Rough Amber Gemstone",
+	"item.skyblock.rough_amethyst": "❈ Rough Amethyst Gemstone",
+	"item.skyblock.rough_jade": "☘ Rough Jade Gemstone",
+	"item.skyblock.rough_jasper": "❁ Rough Jasper Gemstone",
+	"item.skyblock.rough_opal" : "❂ Rough Opal Gemstone",
+	"item.skyblock.rough_ruby": "❤ Rough Ruby Gemstone",
+	"item.skyblock.rough_sapphire": "✎ Rough Sapphire Gemstone",
+	"item.skyblock.rough_topaz": "✧ Rough Topaz Gemstone",
 
 	"item.minecraft.tipped_arrow.effect.healing_00": "Arrow of Healing",
 	"item.minecraft.potion.effect.healing_00": "Potion of Healing",
@@ -7657,7 +7672,6 @@
 
 	"potion.potency.6": "VII",
 	"potion.potency.7": "VIII",
-
 	
 	"effect.skyblock.adrenaline": "Adrenaline",
 	"effect.skyblock.agility": "Agility",
@@ -7764,7 +7778,6 @@
 	"enchantment.skyblock.ultimate_jerry": "Ultimate Jerry",
 	"enchantment.skyblock.ultimate_wise": "Ultimate Wise",
 	"enchantment.skyblock.wisdom": "Wisdom",
-
 	
 	"entity.skyblock.arachne": "Arachne",
 	"entity.skyblock.arachne_keeper": "Arachne's Keeper",
@@ -7909,12 +7922,12 @@
 	"itemGroup.combat": "§7Combat§r",
 	"itemGroup.forage": "§2Foraging§r",
 	"itemGroup.fish": "§fFishing§r",
-	"itemGroup.boss": "§5Enchanting§r",
+	"itemGroup.boss": "§5Boss§r",
 	
 	"accessory.bait_ring": "Grants a §f5%§r chance to not consume §eBait§r.",
-	"accessory.bat_artifact": "Grants: +5% %s, +3% %s, +3 %s",
-	"accessory.bat_ring": "Grants: +3% %s, +2% %s, +2 %s",
-	"accessory.bat_talisman": "Grants: +1% %s, +1% %s, +1 %s",
+	"accessory.bat_artifact": "Grants: +5%% %s, +3%% %s, +3 %s",
+	"accessory.bat_ring": "Grants: +3%% %s, +2%% %s, +2 %s",
+	"accessory.bat_talisman": "Grants: +1%% %s, +1%% %s, +1 %s",
 	"accessory.campfire": "Heals the player %s %s per second.",
 	"accessory.candy_artifact": "Increases the chance for mobs to drop Candy by §a15%§r.",
 	"accessory.candy_ring": "Increases the chance for mobs to drop Candy by §a10%§r.",
@@ -7922,27 +7935,27 @@
 	"accessory.cat_talisman": "Increases %s by 1%.",
 	"accessory.cheetah_talisman": "Increases %s by 2%.",
 	"accessory.coin_talisman": "Accationaly spawns Coins while in your inventory.",
-	"accessory.crooked_artifact": "Gives a 2% discount on most shops.",
+	"accessory.crooked_artifact": "Gives a 2%% discount on most shops.",
 	"accessory.day_crystal": "Gives extra %s & %s during the day.",
 	"accessory.del": "Automatically delete certain materials in your inventory on pickup.",
 	"accessory.devour_ring": "Heals .1 %s when killing a monster.",
 	"accessory.ender_artifact": "Reduce the amount of damage taken from Ender Dragons, Enderman, and Endermites.",
-	"accessory.experience_artifact": "Gain 25% more experience",
+	"accessory.experience_artifact": "Gain 25%% more experience",
 	"accessory.farmer_orb": "Increases the regrowth rate of nearby crops.",
-	"accessory.farming_talisman": "Increases %s by 10% while in the Farm, Barn, and Mushroom Desert.",
+	"accessory.farming_talisman": "Increases %s by 10%% while in the Farm, Barn, and Mushroom Desert.",
 	"accessory.feather_artifact": "Increases max distance before taking fall damage by 10 blocks and reduces fall damage by 15%.",
 	"accessory.feather_ring": "Increases the max distance before taking fall damage by 7 blocks and reduces fall damage by 10%.",
 	"accessory.feather_talisman": "Increases the max distance before taking fall damage by 5 blocks.",
 	"accessory.fire": "Provides immunity to fire damage.",
 	"accessory.fish_affinity": "Decreases %s by 5%.",
-	"accessory.frozen": "Gives +1% %s.",
+	"accessory.frozen": "Gives +1%% %s.",
 	"accessory.gravity": "The closer you are to the spawn on the island, the more %s and %s you will get. (Max +10)",
 	"accessory.haste": "Gives you %s I for 15 seconds when breaking any block.",
 	"accessory.healing": "Increases §chealing§r by %s%.",
 	"accessory.hunter": "Increases Combat XP gained by %s%",
 	"accessory.intimidation": "Ensures that Monsters below level %s will no longer target you.",
 	"accessory.lava": "Provides an immunity to Lava.",
-	"accessory.lynx": "Gives +2% %s.",
+	"accessory.lynx": "Gives +2%% %s.",
 	"accessory.magnetic": "Increases your item pickup range by 3 times.",
 	"accessory.melody": "Gives +6 %s",
 	"accessory.mine": "Increases your %s while in the Coal Mine, Gold Mine, Deep Caverns, Gunpowder Mines, Lapis Quarry, Pigmen's Den, Slimehill, Diamond Reserve, Obsidian Sanctuary.",
@@ -7951,7 +7964,7 @@
 	"accessory.night_vision": "Grants %s I.",
 	"accessory.party_hat": "Grants +1 %s per in-game year played.",
 	"accessory.comp": "Automatically turn certain materials in your inventoy into their enchanted forms.",
-	"accessory.pig": "Gives +1% %s",
+	"accessory.pig": "Gives +1%% %s",
 	"accessory.piggy": "Save %s of your coins.",
 	"accessory.piggy.0": "100%",
 	"accessory.piggy.1": "50%",
@@ -7966,26 +7979,25 @@
 	"accessory.skeleton": "Reduce the damage taken from skeletons by 5%.",
 	"accessory.speed": "Gives +%s %s.",
 	"accessory.spider": "Reduces the damage taken from Spiders and Cave Spiders by %s.",
-	"accessory.tarantula": "Every 10th hit on the same entity will do 10% damage.",
-	"accessory.treasure": "Grants +%s% extra loot to end of dungeon chests.",
+	"accessory.tarantula": "Every 10th hit on the same entity will do 10%% damage.",
+	"accessory.treasure": "Grants +%s%% extra loot to end of dungeon chests.",
 	"accessory.vaccine": "Provides immunity to %s damage.",
-	"accessory.village": "Increases your %s by 10% while in the Village.",
+	"accessory.village": "Increases your %s by 10%% while in the Village.",
 	"accessory.wedding": "Grants a 1 in 10^%s to deal double damage.",
 	"accessory.wither": "Reduces that damage taken from Withers by 20%.",
-	"accessory.wolf_paw": "Gives +1% %s.",
+	"accessory.wolf_paw": "Gives +1%% %s.",
 	"accessory.wolf": "Reduces damage taken from Wolves by %s%",
-	"accessory.wood": "Increases %s by 10% while in the Forest, Graveyard, and Wilderness",
+	"accessory.wood": "Increases %s by 10%% while in the Forest, Graveyard, and Wilderness",
 	"accessory.zombie": "Reduces damage taken from Zombies by %s%.",
-
 	
 	"armor.ability": "Ability: %s",
 	"armor.full_set_bonus": "Full Set Bonus: ",
 
 	"armor.adaptive.fsb": "Efficient Training",
-	"armor.adaptive.fsb.disc": "Every 5 Catacombs levels, this armor piece gains +2% stats.",
+	"armor.adaptive.fsb.disc": "Every 5 Catacombs levels, this armor piece gains +2%% stats.",
 
 	"armor.angler.fsb.0": "Sea Creature Master",
-	"armor.angler.fsb.0.disc": "Take 30% less damage from Sea Creatures.",
+	"armor.angler.fsb.0.disc": "Take 30%% less damage from Sea Creatures.",
 	"armor.angler.fsb.1": "Deepness Within",
 	"armor.angler.fsb.1.disc": "Get +2 %s per fishing level.",
 
@@ -7993,20 +8005,20 @@
 	"armor.bat_person.fsb.disc": "Removes the cooldown from the Grappling Hook.",
 
 	"armor.blaze.fsb": "Blazing Aura",
-	"armor.blaze.fsb.disc.0": "Damages mobs in a 5 block range for 3% of their max Health per second.",
+	"armor.blaze.fsb.disc.0": "Damages mobs in a 5 block range for 3%% of their max Health per second.",
 	"armor.blaze.fsb.disc.1": "Also grants permanent Fire and Lava immunity",
 
 	"armor.cactus.fsb": "Deflect",
-	"armor.cactus.fsb.disc": "Rebound 33% of the damage you take back at your enemy.",
+	"armor.cactus.fsb.disc": "Rebound 33%% of the damage you take back at your enemy.",
 
 	"armor.creeper_pants": "Detonate",
-	"armor.creeper_pants.disc": "Causes an explosion when dropping below 20% HP, damaging and knocking back all monsters arround you.",
+	"armor.creeper_pants.disc": "Causes an explosion when dropping below 20%% HP, damaging and knocking back all monsters arround you.",
 
 	"armor.tux.fsb": "Dashing!",
-	"armor.tux.fsb.disc": "Max health is set to %s. Deal +%s% more damaage.",
+	"armor.tux.fsb.disc": "Max health is set to %s. Deal +%s%% more damaage.",
 
 	"armor.crystal.fsb": "Refraction",
-	"armor.crystal.fsb.disc": "The stats of this armor change from 0% to 200% depending on the current light level.",
+	"armor.crystal.fsb.disc": "The stats of this armor change from 0%% to 200%% depending on the current light level.",
 
 	"armor.diver.fsb": "One with the Fish",
 	"armor.diver.fsb.disc.0": "While toughing the water you move increadibly fast.",
@@ -8036,7 +8048,7 @@
 	"armor.farm_suit.fsb.disc": "Increases te regrowth rate of nearby crops on public islands.",
 
 	"armor.frozen_blaze.fsb": "Blazing Aura",
-	"armor.frozen_blaze.fsb.disc.0": "Damages mobs in a 5 block range for 300 base damage +3% of their max %s per second and applies %s I for 4 seconds.",
+	"armor.frozen_blaze.fsb.disc.0": "Damages mobs in a 5 block range for 300 base damage +3%% of their max %s per second and applies %s I for 4 seconds.",
 	"armor.frozen_blaze.fsb.disc.1": "Max damage per second increased by +100 per 5000 rods (5000 max damage cap).",
 	"armor.frozen_blaze.fsb.disc.2": "Also grants permanent Fire and Lava immunity.",
 
@@ -8055,19 +8067,19 @@
 	"armor.lapis.fsb.disc": "Increases the wearer's %s by 60.",
 
 	"armor.leaflet.fsb": "Energy of the Forest",
-	"armor.leaflet.fsb.disc": "Grants +10% damage reduction and +10% extra damage.",
+	"armor.leaflet.fsb.disc": "Grants +10%% damage reduction and +10%% extra damage.",
 
 	"armor.magma.fsb": "Absorb",
 	"armor.magma.fsb.disc": "Every 10 %ss killed gives +1 %s and +1 %s",
 
 	"armor.mastiff.fsb": "Absolute Unit",
 	"armor.mastiff.fsb.disc.0": "+10 %s per %s.",
-	"armor.mastiff.fsb.disc.1": "Regain 2% of max hp when hit.",
-	"armor.mastiff.fsb.disc.2": "Receive -20% damage from wolves.",
-	"armor.mastiff.fsb.disc.3": "%s is 50% less effective",
+	"armor.mastiff.fsb.disc.1": "Regain 2%% of max hp when hit.",
+	"armor.mastiff.fsb.disc.2": "Receive -20%% damage from wolves.",
+	"armor.mastiff.fsb.disc.3": "%s is 50%% less effective",
 
 	"armor.miner.fsb": "Regeneration",
-	"armor.miner.fsb.disc": "Regenerates 5% of your max Health every second when exiting combat for 8 seconds.",
+	"armor.miner.fsb.disc": "Regenerates 5%% of your max Health every second when exiting combat for 8 seconds.",
 
 	"armor.miner_outfit.fsb": "Haste",
 	"armor.miner_outfit.fsb.disc": "Grants the wearer permanent %s II while worn.",
@@ -8084,13 +8096,13 @@
 	"armor.pack.fsb.disc.1": "Max of 3 players.",
 
 	"armor.protector.fsb": "Protective Blood",
-	"armor.protector.fsb.disc": "Increases the %s bonus of each armor piece by 1% for each percent of missing %s.",
+	"armor.protector.fsb.disc": "Increases the %s bonus of each armor piece by 1%% for each percent of missing %s.",
 
 	"armor.pumpkin.fsb": "Pumpkin Buff",
-	"armor.pumpkin.fsb.disc": "Grants +10% damage reduction from all sources and +10% damage.",
+	"armor.pumpkin.fsb.disc": "Grants +10%% damage reduction from all sources and +10%% damage.",
 
 	"armor.revenant.fsb": "Trolling the Reaper",
-	"armor.revenant.fsb.disc.0": "Healing Wands are 50% more effective.",
+	"armor.revenant.fsb.disc.0": "Healing Wands are 50%% more effective.",
 	"armor.revenant.fsb.disc.1": "Gain +20 %s against Zombies.",
 
 	"armor.skeleton_helmet": "Bone Shield",
@@ -8115,17 +8127,17 @@
 	"armor.sponge.fsb.disc": "Doubles %s while in water.",
 
 	"armor.spooky.fsb": "Candy Man",
-	"armor.spooky.fsb.disc": "Grants a +5% chance to find rare candy.",
+	"armor.spooky.fsb.disc": "Grants a +5%% chance to find rare candy.",
 
 	"armor.strong.fsb": "Strong Blood",
 	"armor.strong.fsb.disc": "Gives +75 damage, +2 teleport distance, +3 seconds of duration, +5 strength of cast to the Aspect of the End.",
 
 	"armor.superior.fsb": "Superior Blood",
 	"armor.superior.fsb.disc.0": "All stats are increased by 5%.",
-	"armor.superior.fsb.disc.1": "The Aspect of the Dragons ability deals 50% more damage.",
+	"armor.superior.fsb.disc.1": "The Aspect of the Dragons ability deals 50%% more damage.",
 
 	"armor.tarantula.fsb": "Octodexterity",
-	"armor.tarantula.fsb.disc": "Every 4th strike, deal double damage and apply Venom reducing healing by 40% for 4 seconds.",
+	"armor.tarantula.fsb.disc": "Every 4th strike, deal double damage and apply Venom reducing healing by 40%% for 4 seconds.",
 	"armor.tarantula.piece_bonus": "Kill Spiders to accumulate defense against them.",
 
 	"armor.tarantula_boots": "Double Jump",
@@ -8141,27 +8153,25 @@
 	"armor.unstable.fsb.disc": "Every 10 seconds, skrike mobs with in 7 blocks with 3000 damage.",
 
 	"armor.wise.fsb": "Wise Blood",
-	"armor.wise.fsb.disc": "All abilities cost 33% less %s.",
+	"armor.wise.fsb.disc": "All abilities cost 33%% less %s.",
 
 	"armor.young.fsb": "Young Blood",
-	"armor.young.fsb.disc": "All abilities cost 33% less %s.",
+	"armor.young.fsb.disc": "All abilities cost 33%% less %s.",
 
 	"armor.zombie.fsb": "Projectile Absorption",
 	"armor.zombie.fsb.disc": "Heals the wearer for 2 health per second for 5 seconds when hit by a projectile.",
-
 	
-	"bait.blessed": "When fishing, get a 15% chance to get double drops.",
+	"bait.blessed": "When fishing, get a 15%% chance to get double drops.",
 	"bait.carrot": "Chance to fish up the Carrot King.",
 	"bait.dark": "Increases chance to catch Rare Sea Creatures during the Night.",
-	"bait.fish": "+30% %s.",
-	"bait.ice": "+20% chance to catch winter Sea Creatures",
+	"bait.fish": "+30%% %s.",
+	"bait.ice": "+20%% chance to catch winter Sea Creatures",
 	"bait.light": "Increases chance to catch Rare Sea Creatures during the Day.",
-	"bait.minnow": "+15% %s.",
-	"bait.shark": "+15% chance to catch Sharks during the Fishing Festival",
+	"bait.minnow": "+15%% %s.",
+	"bait.shark": "+15%% chance to catch Sharks during the Fishing Festival",
 	"bait.spiked": "Increases sea creature Spawn Rate by 6%.",
-	"bait.spooky": "+15% chance to catch spooky Sea Creatures and +15% %s.",
-	"bait.whale": "Small chance to get double drops from items fished, higher chance to catch Rare Sea Creatures and 20% %s.",
-
+	"bait.spooky": "+15%% chance to catch spooky Sea Creatures and +15%% %s.",
+	"bait.whale": "Small chance to get double drops from items fished, higher chance to catch Rare Sea Creatures and 20%% %s.",
 	
 	"bow.ability": "Item Ability: ",
 
@@ -8169,13 +8179,13 @@
 	"bow.bonemerang.0": "Throw bone a short distance, dealing the damage an arrow would.",
 	"bow.bonemerang.1": "Deals double damage when coming back.",
 	"bow.bonemerang.2": "Pierces up to 10 foes.",
-	"bow.death.0": "Deal +100% more damage to Undead Monsters.",
-	"bow.death.1": "Your arrows have a 50% chance to bounce to another target after hitting an enemy.",
+	"bow.death.0": "Deal +100%% more damage to Undead Monsters.",
+	"bow.death.1": "Your arrows have a 50%% chance to bounce to another target after hitting an enemy.",
 	"bow.end_stone": "Extreme Focus",
 	"bow.end_stone.0": "Consumes all your %s, and your next hit will deal that much more damage!",
 	"bow.ender": "Ender Warp",
 	"bow.ender.0": "Shoots an %s.",
-	"bow.ender.1": "Upon landing, you deal damage to all Monsters in an 8 block radius for 10% of their %s.",
+	"bow.ender.1": "Upon landing, you deal damage to all Monsters in an 8 block radius for 10%% of their %s.",
 	"bow.explosive": "Explosive",
 	"bow.explosive.0": "Creates an explosion on impact!",
 	"bow.explosive.1": "Every Monster caught in this explosion takes the full damage of the weapon!",
@@ -8187,15 +8197,15 @@
 	"bow.last.1": "Stacks up to 2 times.",
 	"bow.machine": "Rapid Fire",
 	"bow.machine.0": "Shoot 5 arrows per second for 8 seconds!",
-	"bow.machine.1": "Each arrow deals 70% damage",
+	"bow.machine.1": "Each arrow deals 70%% damage",
 	"bow.magma": "Consumes 1 Magma Cream from the Inventory or Quiver to x2 damage per shot.",
 	"bow.mosquito": "Nasty Bite",
 	"bow.mosquito.0": "Fully charged shots while sneaking",
-	"bow.mosquito.1": "Costs 11% of max %s, deals +19% more damage, Heal for 2x the %s cost",
-	"bow.prismarine": "Will consume Prismarine Shards in your inventory or your Quiver to deal with +300% damage to Squids, Guardians, and Elder Guardians.",
+	"bow.mosquito.1": "Costs 11%% of max %s, deals +19%% more damage, Heal for 2x the %s cost",
+	"bow.prismarine": "Will consume Prismarine Shards in your inventory or your Quiver to deal with +300%% damage to Squids, Guardians, and Elder Guardians.",
 	"bow.runaan": "Triple Shot",
 	"bow.runaan.0": "Shoots 3 arrows at the same time!",
-	"bow.runaan.1": "The extra arrows do 40% of the damage.",
+	"bow.runaan.1": "The extra arrows do 40%% of the damage.",
 	"bow.savanna": "All damage dealt with this bow is doubled.",
 	"bow.scorpion": "Stinger",
 	"bow.scorpion.0": "Fully charged shots while sneaking.",
@@ -8209,13 +8219,12 @@
 	"bow.soulstealer.1": "You can shoot up to 3 skulls before going on a 2-second cooldown.",
 	"bow.spider.0": "Arrows shot using this bow have an aura around them that deals %s %s to nearby enemies.",
 	"bow.spider.1": "Arrows travel through enemies.",
-	"bow.spirit": "Deals +2% damage to Undead monsters for every 1% of your missing %s.",
-	"bow.super_undead": "Deal +100% more damage to Undead Monsters, Your arrows have a 25% chance to bounce to another target after hitting an enemy.",
-	"bow.undead": "Deals +100% damage to Undead monsters.",
+	"bow.spirit": "Deals +2%% damage to Undead monsters for every 1%% of your missing %s.",
+	"bow.super_undead": "Deal +100%% more damage to Undead Monsters, Your arrows have a 25%% chance to bounce to another target after hitting an enemy.",
+	"bow.undead": "Deals +100%% damage to Undead monsters.",
 	"bow.venom.0": "Fires a volley of 5 arrows.",
 	"bow.venom.1": "Arrows will apply venom to all enemies hit dealing %s %s every second for 3 seconds.",
 	"bow.wither": "Deal double damage to Withers and Wither Skeletons",
-
 	
 	"commission.0.0": "Ice Walker Slayer",
 	"commission.0.1.disc": "Slay 100 Ice Walkers",
@@ -8246,7 +8255,20 @@
 	"commission.1.7.disc": "Damage Star Sentrys 10 times.",
 	"commission.1.8": "2x Mithril Powder Collector",
 	"commission.1.8.disc": "Collect 500 Mithril Powder during the 2x Powder event.",
-
+	
+	"dimention.hub": "The Hub",
+	"dimention.barn": "The Barn",
+	"dimention.desert": "Mushroom Desert",
+	"dimention.park": "The Park",
+	"dimention.spider": "Spider's Den",
+	"dimention.end": "The End",
+	"dimention.nether": "Crimson Isle",
+	"dimention.gold": "Gold Mine",
+	"dimention.deep": "Deep Caverns",
+	"dimention.mines": "Dwarven Mines",
+	"dimention.crystal_hollows": "Crystal Hollows",
+	"dimention.jerry": "Winter Island",
+	"dimention.dungeon": "Dungeon Hub",
 	
 	"drill.ft.1": "Fuel Tank: §cNot Instaled§r",
 	"drill.ft.2": "Increases fuel capacity with part instaled.",
@@ -8260,10 +8282,25 @@
 
 	"drill.dm": "Apply Drill Parts to this drill by talking to a §2Drill Mechanic§r!",
 	"drill.fuel": "Fuel: %s/3k",
-
+	
+	"gemstone.generic": "Some say that when %s, it can give its owner extra %s.",
+	"gemstone.harness": "harnessed properly",
+	"gemstone.rough" : "Taken right from the heart of a crystal vein in the %s.",
+	"gemstone.flawed" : "A slightly better version of %s, but it could still use some work.",
+	"gemstone.fine" : "A type of %s that clearly has been treated with care.",
+	"gemstone.flawless": "A near perfect version of %s.",
+	"gemstone.perfect": "A perfectly refined %s.",
+	"gemstone.amber": "Amber",
+	"gemstone.amethyst": "Amethyst",
+	"gemstone.jade": "Jade",
+	"gemstone.jasper": "Jasper",
+	"gemstone.opal": "Opal",
+	"gemstone.ruby": "Ruby",
+	"gemstone.sapphire": "Sapphire",
+	"gemstone.topaz": "Topaz",
+	
 	"item.reforge": "This item can be reforged",
 	"item.requirement": "§4❣Requires§r %s",
-
 	
 	"minion.dialogue.out_of_reach": "I can't reach any %s.",
 	"minion.dialogue.restart": "Back to work! Break is over.",
@@ -8302,12 +8339,10 @@
 	"minion.dialogue.missed.5": "Wait for it...",
 	"minion.dialogue.missed.6": "Maybe I should have picked another job...",
 	"minion.dialogue.missed.7": "Haha, I got him!",
-
 	
 	"minion.dialogue.convo.0": "Hey, wanna do something after work?",
 	"minion.dialogue.convo.0.response": "When it that?",
 	"minion.dialogue.convo.0.response.0": "Not sure",
-
 	
 	"npc.andrew": "Andrew",
 	"npc.andrew.0": "This game is still under heavy development, don't forget to check the §aforums§r often for updates!",
@@ -8406,12 +8441,10 @@
 	"npc.marco.complete.0": "Before spraying on a wall, consider previewing it in the menu! Right-click on any spray of your choice and it'll magically appear in your hand.",
 	"npc.marco.complete.1": "Don't forget to refill your spray can with dye! You can pick some of the flowers in my garden if you want to.",
 	"npc.marco.complete.2": "You can select sprays by left-clicking with your Spray Can!",
-
 	
 	"pick.bp": "Breaking Power %s",
 	"pick.ms": "Mining Speed: %s",
 	"pick.mf": "Mining Fortune: %s",
-
 	
 	"pet.max_level": "MAX LEVEL",
 	"pet.ridable": "Ridable",
@@ -8436,30 +8469,29 @@
 	"pet.baby_yeti.ability.0": "Cold Breeze",
 	"pet.baby_yeti.ability.0.disc": "Gives %s %s and %s when near snow.",
 	"pet.baby_yeti.ability.1": "Ice Shields",
-	"pet.baby_yeti.ability.1.disc": "Gain %s% of your %s and %s",
+	"pet.baby_yeti.ability.1.disc": "Gain %s%% of your %s and %s",
 	"pet.baby_yeti.ability.2": "Yeti Fury",
 	"pet.baby_yeti.ability.2.disc": "Buff the Yeti sword by %s %s and %s",
 
 	"pet.bal.ability.0": "Protective Skin",
 	"pet.bal.ability.0.disc": "Gives §4heat immunity§r",
 	"pet.bal.ability.1": "Fire Whip",
-	"pet.bal.ability.1.disc": "Every 5s while in combat, Bal will strike nearby enemies with his fire whip dealing %s% for your damage as %s.",
+	"pet.bal.ability.1.disc": "Every 5s while in combat, Bal will strike nearby enemies with his fire whip dealing %s%% for your damage as %s.",
 	"pet.bal.ability.2": "Made of Lava",
-	"pet.bal.ability.2.disc": "Gain %s% on ALL your stats when inside the §4Magma Fields.§r",
+	"pet.bal.ability.2.disc": "Gain %s%% on ALL your stats when inside the §4Magma Fields.§r",
 
 	"pet.bat.ability.0": "Candy Lover",
 	"pet.bat.ability.0.disc": "Increases drop chance of candies from mobs by §2%s%",
 	"pet.bat.ability.1": "Nightmare",
 	"pet.bat.ability.1.disc": "During night, gain %s %s, %s %s, and %s",
 	"pet.bat.ability.2": "Wings of Steel",
-	"pet.bat.ability.2.disc": "Deals +%s% damage to Spooky enemies during the Spooky Festival.",
+	"pet.bat.ability.2.disc": "Deals +%s%% damage to Spooky enemies during the Spooky Festival.",
 	"pet.bat.ability.3": "Sonar",
-	"pet.bat.ability.3.disc": "+%s% chance to fish up spooky sea creatures",
+	"pet.bat.ability.3.disc": "+%s%% chance to fish up spooky sea creatures",
 
 	"pet.bee.ability.0": "Hive",
 	"pet.bee.ability.0.disc": "Gain %s %s and %s %s for each nearby bee. §8Max 15 Bees.§r",
 	"pet.bee.ability.1": "Busy Buzz Buzz",
-
 	
 	"rarity.common": "COMMON",
 	"rarity.uncommon": "UNCOMMON",
@@ -8472,29 +8504,34 @@
 	"rarity.very_special": "VERY SPECIAL",
 	"rarity.upgraded": "§ka§r %s §ka§r",
 	
-	"stat.attack_speed": "⚔ Attack Speed",
-	"stat.ability_damage": "✹ Ability Damage",
-	"stat.breaking_power": "⛏ Breaking Power",
+	"stat.health": "❤ Health",
+	"stat.defense": "❈ Defense",
+	"stat.strength": "❁ Strength",
+	"stat.intelligence": "✎ Intelligence",
+	"stat.speed": "✦ Speed",
 	"stat.crit_chance": "☣ Crit Chance",
 	"stat.crit_damage": "☠ Crit Damage",
-	"stat.defense": "❈ Defense",
-	"stat.farming_fortune": "☘ Farming Fortune",
+	"stat.attack_speed": "⚔ Attack Speed",
+	"stat.ability_damage": "✹ Ability Damage",
+	"stat.true_defense": "❂ True Defense",
 	"stat.ferocity": "⫽ Ferocity",
-	"stat.fishing_speed": "🎣 Fishing Speed",
-	"stat.foraging_fortune": "☘ Foraging Fortune",
-	"stat.health": "❤ Health",
-	"stat.intelligence": "✎ Intelligence",
 	"stat.magic_find": "✯ Magic Find",
-	"stat.mana": "✎ Mana",
-	"stat.mining_fortune": "☘ Mining Fortune",
-	"stat.mining_speed": "⛏ Mining Speed",
 	"stat.pet_luck": "♣ Pet Luck",
 	"stat.sea_creature_chance": "α Sea Creature Chance",
-	"stat.speed": "✦ Speed",
-	"stat.strength": "❁ Strength",
-	"stat.true_defense": "❂ True Defense",
-	"stat.soulflow": "%s⸎ Soulflow",
-	"stat.overflow": "%sʬ Overflow",
+	"stat.mining_speed": "⛏ Mining Speed",
+	"stat.mining_fortune": "☘ Mining Fortune",
+	"stat.farming_fortune": "☘ Farming Fortune",
+	"stat.foraging_fortune": "☘ Foraging Fortune",
+	"stat.damage": "❁ Damage",
+	"stat.mana": "✎ Mana",
+	"stat.true_damage": "True Damage",
+	"stat.absorption": "Absorption",
+	"stat.breaking_power": "⛏ Breaking Power",
+	"stat.overflow": "ʬ Overflow",
+	"stat.heat": "♨ Heat",
+	"stat.pristine": "✧ Pristine",
+	"stat.fishing_speed": "🎣v Fishing Speed",
+	"stat.soulflow": "⸎ Soulflow",
 	
 	"sword.ability": "Item Ability: ",
 
@@ -8503,10 +8540,13 @@
 	"sword.aotd.1": "Damaged Monsters take huge Knockback.",
 
 	"sword.aote": "Instant Transmission",
-	"sword.aote.0": "Teleports you 8 blocks ahead of you and you gain +50% %s for 3 seconds.",
+	"sword.aote.0": "Teleport §a8 blocks§r ahead of you and you gain §a+50%%§r %s for §a3 seconds§r.",
 
 	"sword.aotj": "Parley",
 	"sword.aotj.0": "Channel your inner Jerry.",
+	
+	"sword.aotv": "Instant Transmission",
+	"sword.aotv.0": "Teleport §a8 blocks§r ahead of you and you gain §a+50%%§r %s for §a3 seconds§r.",
 
 	"sword.cleaver": "Cleave",
 	"sword.cleaver.0": "When hitting a mob, any entity within a 3 block radius will take a small portion of damage.",
@@ -8542,20 +8582,20 @@
 	"sword.midas.1": "The maximum bonus of this item is 120 if the bid was 50 million or more.",
 
 	"sword.ornate": "Instant Heal",
-	"sword.ornate.0": "Heal yourself for 29 + 5% %s and Players within 7 blocks for 10 %s.",
+	"sword.ornate.0": "Heal yourself for 29 + 5%% %s and Players within 7 blocks for 10 %s.",
 
 	"sword.pigman": "Burning Souls",
 	"sword.pigman.0": "Gain +10 %s for 5s and cast a vortex of flames towards nearby enemies dealing up to 1500 %s over 5 seconds.",
 
 	"sword.reaper": "Desecration",
 	"sword.reaper.0": "Within 3 seconds of killing an enemy, desecrate their grave to spawn a zombie.",
-	"sword.reaper.1": "Zombies lose 2% %s/s",
+	"sword.reaper.1": "Zombies lose 2%% %s/s",
 
 	"sword.recluse": "Squash 'em",
 	"sword.recluse.0": "Squash Spiders to accumulate %s against them.",
 
 	"sword.rogue": "Speed Boost",
-	"sword.rogue.0": "Increases your %s by +20% for 30 seconds.",
+	"sword.rogue.0": "Increases your %s by +20%% for 30 seconds.",
 	"sword.rogue.1": "Only gives +10 if already active.",
 
 	"sword.scorpion": "Heartstopper",
@@ -8572,5 +8612,5 @@
 	"sword.yeti.2": "Maximum range of 32 blocks.",
 
 	"sword.zombie": "Instant Heal",
-	"sword.zombie.0": "Heal yourself for 24 + 5% max %s and Players within 7 blocks for 10 %s."
+	"sword.zombie.0": "Heal yourself for 24 + 5%% max %s and Players within 7 blocks for 10 %s."
 }

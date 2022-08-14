@@ -4,7 +4,7 @@ import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
 
 public enum ModSwordTier implements Tier {
-	Adaptive_Blade(170), AOTD(225), AOTE(100), AOTJ(1), Bonzo_Staff(160), Cleaver(40), Crypt_Witherlord_Sword(62),
+	Adaptive_Blade(170), AOTD(225), AOTE(100), AOTJ(1), AOTV(120), Bonzo_Staff(160), Cleaver(40), Crypt_Witherlord_Sword(62),
 	Daedalus_Axe(0), Dreadlord_Sword(52), Edible_Mace(125), Ember_Rod(80), Emerald_Blade(130), End_Stone_Sword(120),
 	End_Sword(35), Fancy_Sword(20), Flaming_Sword(50), Frozen_Scythe(80), Golem_Sword(80), Hunter_Knife(80),
 	Hyper_Cleaver(145), Ink_Wand(130), Leaping_Sword(150), Midas_Sword(150), Ornate_Zombie_Sword(110),
