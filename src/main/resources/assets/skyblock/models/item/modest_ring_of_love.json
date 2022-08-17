@@ -1,6 +1,0 @@
-{
-	"parent": "item/handheld",
-	"textures": {
-		"layer0": "skyblock:items/accessories/modest_ring_of_love"
-	}
-}

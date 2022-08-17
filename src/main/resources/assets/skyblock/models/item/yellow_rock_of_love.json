@@ -1,6 +1,0 @@
-{
-	"parent": "item/handheld",
-	"textures": {
-		"layer0": "skyblock:items/accessories/yellow_rock_of_love"
-	}
-}

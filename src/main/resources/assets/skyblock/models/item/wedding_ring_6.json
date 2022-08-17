@@ -1,6 +1,6 @@
 {
-	"parent": "item/generated",
+	"parent": "item/handheld",
 	"textures": {
-		"layer0": "hypixelskyblockmod:items/wedding_ring_6"
+		"layer0": "skyblock:items/accessories/classy_ring_of_love"
 	}
 }
