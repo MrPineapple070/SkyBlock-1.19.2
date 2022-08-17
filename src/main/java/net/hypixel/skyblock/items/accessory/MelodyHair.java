@@ -5,6 +5,7 @@ import java.util.List;
 import net.hypixel.skyblock.items.Rarity;
 import net.hypixel.skyblock.util.ItemProperties;
 import net.hypixel.skyblock.util.StatString;
+import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
@@ -25,7 +26,7 @@ import net.minecraft.world.level.Level;
  * @version 28 July 2020
  */
 public class MelodyHair extends AccessoryItem{
-	private static final Component info = Component.translatable("accessory.melody", StatString.intelligence);
+	private static final Component info = Component.translatable("accessory.melody", StatString.intelligence).withStyle(ChatFormatting.GRAY);
 
 	private int currentPitch;
 

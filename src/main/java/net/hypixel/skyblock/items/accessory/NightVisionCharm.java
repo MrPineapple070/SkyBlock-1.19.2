@@ -4,8 +4,8 @@ import java.util.List;
 
 import net.hypixel.skyblock.items.Rarity;
 import net.hypixel.skyblock.util.ItemProperties;
+import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.network.chat.Style;
 import net.minecraft.network.chat.TextColor;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -24,10 +24,12 @@ import net.minecraft.world.level.Level;
  * @author MrPineapple070
  * @version 28 July 2020
  */
-public class NightVisionCharm extends AccessoryItem{
-	private static final Component info = Component.translatable("accessory.night_vision",
-			((MutableComponent) MobEffects.NIGHT_VISION.getDisplayName())
-			.withStyle(Style.EMPTY.withColor(TextColor.fromRgb(MobEffects.NIGHT_VISION.getColor()))));
+public class NightVisionCharm extends AccessoryItem {
+	private static final Component info = Component
+			.translatable("accessory.night_vision",
+					Component.translatable(MobEffects.NIGHT_VISION.getDescriptionId())
+							.withStyle(Style.EMPTY.withColor(TextColor.fromRgb(MobEffects.NIGHT_VISION.getColor()))))
+			.withStyle(ChatFormatting.GRAY);
 
 	private static final MobEffectInstance night_vision = new MobEffectInstance(MobEffects.NIGHT_VISION, 1, 1);
 

@@ -3,10 +3,13 @@ package net.hypixel.skyblock.items.accessory;
 import java.util.Arrays;
 import java.util.List;
 
+import javax.annotation.Nonnull;
+
 import com.google.common.collect.ImmutableList;
 
 import net.hypixel.skyblock.items.Rarity;
 import net.hypixel.skyblock.util.ItemProperties;
+import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
@@ -16,7 +19,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.BonemealableBlock;
 import net.minecraft.world.level.block.state.BlockState;
 
@@ -34,26 +36,17 @@ public class FarmerOrb extends AccessoryItem{
 			.copyOf(Arrays.asList(-8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7));
 	private static final ImmutableList<Integer> dz = ImmutableList
 			.copyOf(Arrays.asList(-8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7));
-	
-	@SuppressWarnings("unused")
-	@Deprecated
-	private static final ImmutableList<Block> effective_on = ImmutableList.copyOf(Arrays.asList(Blocks.WHEAT,
-			Blocks.CARROTS, Blocks.POTATOES, Blocks.BEETROOTS, Blocks.MELON_STEM, Blocks.PUMPKIN_STEM, Blocks.CACTUS,
-			Blocks.SUGAR_CANE, Blocks.COCOA, Blocks.BAMBOO, Blocks.BAMBOO_SAPLING));
-	
-	@SuppressWarnings("unused")
-	@Deprecated
-	private static final int Wheat = 0, Carrots = 1, Potatoes = 2, Beetroot = 3, Melon = 4, Pumpkin = 5, Cactus = 6,
-			Sugar_Cane = 7, Cocoa = 8, Bamboo = 9, Bamboo_Sapling = 10;
 
-	private static final Component info = Component.translatable("accessory.farmer_orb");
+	private static final Component info = Component.translatable("accessory.farmer_orb").withStyle(ChatFormatting.GRAY);
 
 	private final BlockPos[][][] nearby = new BlockPos[16][16][16];
-
+	
+	@Nonnull
 	private BlockPos pos;
 
 	public FarmerOrb() {
 		super(ItemProperties.farm_1, Rarity.Uncommon);
+		this.pos = BlockPos.ZERO;
 	}
 
 	@Override

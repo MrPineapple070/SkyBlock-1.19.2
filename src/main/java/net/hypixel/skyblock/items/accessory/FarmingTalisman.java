@@ -5,6 +5,7 @@ import java.util.List;
 import net.hypixel.skyblock.items.Rarity;
 import net.hypixel.skyblock.util.ItemProperties;
 import net.hypixel.skyblock.util.StatString;
+import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.ItemStack;
@@ -23,7 +24,7 @@ import net.minecraft.world.level.biome.Biome;
  */
 public class FarmingTalisman extends AccessoryItem{
 	private static final Component info = Component.translatable("accessory.farming_talisman",
-			StatString.speed);
+			StatString.speed).withStyle(ChatFormatting.GRAY);
 
 	public FarmingTalisman() {
 		super(ItemProperties.farm_1, Rarity.Common);

@@ -4,6 +4,7 @@ import java.util.List;
 
 import net.hypixel.skyblock.items.Rarity;
 import net.hypixel.skyblock.util.ItemProperties;
+import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.ItemStack;
@@ -20,7 +21,7 @@ import net.minecraft.world.level.Level;
  * @version 25 July 2020
  */
 public class FeatherRing extends AccessoryItem{
-	private static final Component info = Component.translatable("accessory.feather_ring");
+	private static final Component info = Component.translatable("accessory.feather_ring").withStyle(ChatFormatting.GRAY);
 
 	public FeatherRing() {
 		super(ItemProperties.farm_1, Rarity.Uncommon);

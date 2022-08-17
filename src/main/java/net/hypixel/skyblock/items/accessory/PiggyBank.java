@@ -4,6 +4,7 @@ import java.util.List;
 
 import net.hypixel.skyblock.items.Rarity;
 import net.hypixel.skyblock.util.ItemProperties;
+import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.ItemStack;
@@ -22,9 +23,9 @@ public class PiggyBank extends AccessoryItem{
 		Broken, Cracked, Normal;
 	}
 
-	private static final Component percent0 = Component.translatable("accessory.piggy.0");
-	private static final Component percent1 = Component.translatable("accessory.piggy.1");
-	private static final Component percent2 = Component.translatable("accessory.piggy.2");
+	private static final Component percent0 = Component.translatable("accessory.piggy.0").withStyle(ChatFormatting.GRAY);
+	private static final Component percent1 = Component.translatable("accessory.piggy.1").withStyle(ChatFormatting.GRAY);
+	private static final Component percent2 = Component.translatable("accessory.piggy.2").withStyle(ChatFormatting.GRAY);
 
 	private State state;
 

@@ -6,6 +6,7 @@ import java.util.Objects;
 import net.hypixel.skyblock.items.Rarity;
 import net.hypixel.skyblock.util.ItemProperties;
 import net.hypixel.skyblock.util.StatString;
+import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.DyeColor;
@@ -25,7 +26,7 @@ import net.minecraft.world.level.Level;
  */
 public class PartyHatCrab extends AccessoryItem{
 	private static final Component info = Component.translatable("accessory.party_hat",
-			StatString.intelligence);
+			StatString.intelligence).withStyle(ChatFormatting.GRAY);
 
 	/**
 	 * The {@link DyeColor} of this.

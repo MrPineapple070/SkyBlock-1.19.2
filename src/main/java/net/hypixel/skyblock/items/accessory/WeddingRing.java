@@ -5,6 +5,7 @@ import java.util.Random;
 
 import net.hypixel.skyblock.items.Rarity;
 import net.hypixel.skyblock.util.ItemProperties;
+import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.ItemStack;
@@ -95,7 +96,7 @@ public class WeddingRing extends AccessoryItem {
 
 	@Override
 	public void appendHoverText(ItemStack stack, Level level, List<Component> tooltip, TooltipFlag flag) {
-		tooltip.add(Component.translatable("accessory.wedding", this.chance));
+		tooltip.add(Component.translatable("accessory.wedding", this.chance).withStyle(ChatFormatting.GRAY));
 	}
 
 	public boolean chanceSuccessful() {

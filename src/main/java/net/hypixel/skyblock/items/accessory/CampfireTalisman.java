@@ -10,6 +10,7 @@ import com.google.common.collect.ImmutableList;
 import net.hypixel.skyblock.items.Rarity;
 import net.hypixel.skyblock.util.ItemProperties;
 import net.hypixel.skyblock.util.StatString;
+import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
@@ -119,8 +120,8 @@ public class CampfireTalisman extends AccessoryItem {
 
 	@Override
 	public void appendHoverText(ItemStack stack, Level level, List<Component> tooltip, TooltipFlag flag) {
-		tooltip.add(Component.translatable("accessory.campfire", this.heal, StatString.health));
-		tooltip.add(Component.literal(String.valueOf(this.level)));
+		tooltip.add(Component.translatable("accessory.campfire", this.heal, StatString.health).withStyle(ChatFormatting.GRAY));
+		tooltip.add(Component.literal(String.valueOf(this.level)).withStyle(ChatFormatting.GRAY));
 	}
 
 	/**

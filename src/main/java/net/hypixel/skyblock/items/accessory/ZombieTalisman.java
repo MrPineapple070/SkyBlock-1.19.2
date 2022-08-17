@@ -4,6 +4,7 @@ import java.util.List;
 
 import net.hypixel.skyblock.items.Rarity;
 import net.hypixel.skyblock.util.ItemProperties;
+import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.monster.Zombie;
@@ -20,7 +21,7 @@ import net.minecraft.world.level.Level;
  * @version 29 July 2020
  */
 public class ZombieTalisman extends AccessoryItem{
-	private static final Component info = Component.translatable("accessory.zombie", 5);
+	private static final Component info = Component.translatable("accessory.zombie", 5).withStyle(ChatFormatting.GRAY);
 
 	public ZombieTalisman() {
 		super(ItemProperties.combat_1, Rarity.Common);

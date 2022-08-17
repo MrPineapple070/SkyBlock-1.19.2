@@ -4,8 +4,8 @@ import java.util.List;
 
 import net.hypixel.skyblock.items.Rarity;
 import net.hypixel.skyblock.util.ItemProperties;
+import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.network.chat.Style;
 import net.minecraft.network.chat.TextColor;
 import net.minecraft.world.effect.MobEffects;
@@ -22,10 +22,12 @@ import net.minecraft.world.level.Level;
  * @author MrPineapple070
  * @version 29 July 2020
  */
-public class VaccineTalisman extends AccessoryItem{
-	private static final Component info = Component.translatable("accessory.vaccine",
-			((MutableComponent) MobEffects.POISON.getDisplayName())
-			.withStyle(Style.EMPTY.withColor(TextColor.fromRgb(MobEffects.POISON.getColor()))));
+public class VaccineTalisman extends AccessoryItem {
+	private static final Component info = Component
+			.translatable("accessory.vaccine",
+					Component.translatable(MobEffects.POISON.getDescriptionId())
+							.withStyle(Style.EMPTY.withColor(TextColor.fromRgb(MobEffects.POISON.getColor()))))
+			.withStyle(ChatFormatting.GRAY);
 
 	public VaccineTalisman() {
 		super(ItemProperties.farm_1, Rarity.Common);

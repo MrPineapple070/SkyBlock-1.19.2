@@ -4,6 +4,7 @@ import java.util.List;
 
 import net.hypixel.skyblock.items.Rarity;
 import net.hypixel.skyblock.util.ItemProperties;
+import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -21,7 +22,7 @@ import net.minecraft.world.level.Level;
  */
 public class FireTalisman extends AccessoryItem{
 	private static final MobEffectInstance fire = new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 1);
-	private static final Component info = Component.translatable("accessory.fire");
+	private static final Component info = Component.translatable("accessory.fire").withStyle(ChatFormatting.GRAY);
 
 	public FireTalisman() {
 		super(ItemProperties.combat_1, Rarity.Common);

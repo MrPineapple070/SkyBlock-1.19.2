@@ -5,6 +5,7 @@ import java.util.List;
 import net.hypixel.skyblock.items.Rarity;
 import net.hypixel.skyblock.util.ItemProperties;
 import net.hypixel.skyblock.util.StatString;
+import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.Entity;
@@ -25,7 +26,7 @@ import net.minecraft.world.level.storage.LevelData;
  */
 public class GravityTalisman extends AccessoryItem{
 	private static final Component info = Component.translatable("accessory.gravity", StatString.strength,
-			StatString.defense);
+			StatString.defense).withStyle(ChatFormatting.GRAY);
 
 	public GravityTalisman() {
 		super(ItemProperties.mine_1, Rarity.Uncommon);

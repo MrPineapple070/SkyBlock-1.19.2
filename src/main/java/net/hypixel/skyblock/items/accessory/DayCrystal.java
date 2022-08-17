@@ -5,6 +5,7 @@ import java.util.List;
 import net.hypixel.skyblock.items.Rarity;
 import net.hypixel.skyblock.util.ItemProperties;
 import net.hypixel.skyblock.util.StatString;
+import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.ai.attributes.AttributeInstance;
@@ -34,7 +35,7 @@ public class DayCrystal extends AccessoryItem{
 			Attributes.ATTACK_DAMAGE.getDescriptionId(), 0xA, Operation.ADDITION);
 
 	private static final Component info = Component.translatable("accessory.day_crystal",
-			StatString.strength, StatString.defense);
+			StatString.strength, StatString.defense).withStyle(ChatFormatting.GRAY);
 
 	/**
 	 * An {@link AttributeModifier} that increases {@link Attributes#ARMOR} by 10.

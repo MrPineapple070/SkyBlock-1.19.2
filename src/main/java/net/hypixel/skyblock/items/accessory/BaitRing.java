@@ -5,6 +5,7 @@ import java.util.List;
 import net.hypixel.skyblock.items.Rarity;
 import net.hypixel.skyblock.items.bait.Bait;
 import net.hypixel.skyblock.util.ItemProperties;
+import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
@@ -23,7 +24,7 @@ import net.minecraft.world.level.Level;
  * @version 26 July 2020
  */
 public class BaitRing extends AccessoryItem {
-	private static final Component info = Component.translatable("accessory.bait_ring");
+	private static final Component info = Component.translatable("accessory.bait_ring").withStyle(ChatFormatting.GRAY);
 
 	public BaitRing() {
 		super(ItemProperties.fish_1, Rarity.Rare);

@@ -5,6 +5,7 @@ import java.util.List;
 import net.hypixel.skyblock.items.Rarity;
 import net.hypixel.skyblock.util.ItemProperties;
 import net.hypixel.skyblock.util.StatString;
+import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.ai.attributes.AttributeInstance;
@@ -33,7 +34,7 @@ public class LynxTalisman extends AccessoryItem{
 	public static final AttributeModifier speed_mod = new AttributeModifier(
 			Attributes.MOVEMENT_SPEED.getDescriptionId(), .003, Operation.ADDITION);
 
-	private static final Component info = Component.translatable("accessory.lynx", StatString.speed);
+	private static final Component info = Component.translatable("accessory.lynx", StatString.speed).withStyle(ChatFormatting.GRAY);
 
 	public LynxTalisman() {
 		super(ItemProperties.combat_1, Rarity.Rare);

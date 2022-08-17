@@ -11,9 +11,7 @@ import net.hypixel.skyblock.items.accessory.PersonalCompactor.PersonalComp5000;
 import net.hypixel.skyblock.items.accessory.PersonalCompactor.PersonalComp6000;
 import net.hypixel.skyblock.util.ItemStackHelper;
 import net.minecraft.core.NonNullList;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.Level;
 
 public abstract class PersonalAccessory extends AccessoryItem {
 	public static enum Type {
@@ -75,7 +73,4 @@ public abstract class PersonalAccessory extends AccessoryItem {
 	public ItemStack removeStackFromSlot(int index) {
 		return ItemStackHelper.takeItem(this.items, index);
 	}
-	
-	@Override
-	public abstract void inventoryTick(ItemStack stack, Level level, Entity entity, int slot, boolean selected);
 }

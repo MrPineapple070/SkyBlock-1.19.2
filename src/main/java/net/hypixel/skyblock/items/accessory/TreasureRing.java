@@ -4,6 +4,7 @@ import java.util.List;
 
 import net.hypixel.skyblock.items.Rarity;
 import net.hypixel.skyblock.util.ItemProperties;
+import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.ItemStack;
@@ -19,7 +20,7 @@ import net.minecraft.world.level.Level;
  * @since 19 August 2020
  */
 public class TreasureRing extends AccessoryItem{
-	public static final Component info = Component.translatable("accessory.treasure", 2);
+	public static final Component info = Component.translatable("accessory.treasure", 2).withStyle(ChatFormatting.GRAY);
 
 	public TreasureRing() {
 		super(ItemProperties.boss_1, Rarity.Epic);

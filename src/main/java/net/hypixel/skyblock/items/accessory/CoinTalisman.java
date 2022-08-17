@@ -5,6 +5,7 @@ import java.util.List;
 import net.hypixel.skyblock.items.Rarity;
 import net.hypixel.skyblock.items.init.EnchantedItemInit;
 import net.hypixel.skyblock.util.ItemProperties;
+import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.item.ItemEntity;
@@ -22,7 +23,7 @@ import net.minecraft.world.level.Level;
  * @version 18 May 2020
  */
 public class CoinTalisman extends AccessoryItem{
-	private static final Component info = Component.translatable("accessory.coin_talisman");
+	private static final Component info = Component.translatable("accessory.coin_talisman").withStyle(ChatFormatting.GRAY);
 	private int tick;
 
 	public CoinTalisman() {

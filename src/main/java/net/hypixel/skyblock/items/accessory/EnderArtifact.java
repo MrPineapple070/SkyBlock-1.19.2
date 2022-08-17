@@ -4,6 +4,7 @@ import java.util.List;
 
 import net.hypixel.skyblock.items.Rarity;
 import net.hypixel.skyblock.util.ItemProperties;
+import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.boss.enderdragon.EnderDragon;
@@ -23,7 +24,7 @@ import net.minecraft.world.level.Level;
  * @version 25 July 2020
  */
 public class EnderArtifact extends AccessoryItem{
-	private static final Component info = Component.translatable("accessory.ender_artifact");
+	private static final Component info = Component.translatable("accessory.ender_artifact").withStyle(ChatFormatting.GRAY);
 
 	public EnderArtifact() {
 		super(ItemProperties.combat_1, Rarity.Epic);

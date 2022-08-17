@@ -5,6 +5,7 @@ import java.util.List;
 import net.hypixel.skyblock.items.Rarity;
 import net.hypixel.skyblock.util.ItemProperties;
 import net.hypixel.skyblock.util.StatString;
+import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.ItemStack;
@@ -22,7 +23,7 @@ import net.minecraft.world.level.Level;
  */
 public class FishAffinityTalisman extends AccessoryItem{
 	private static final Component info = Component.translatable("accessory.fish_affinity",
-			StatString.fishing_speed);
+			StatString.fishing_speed).withStyle(ChatFormatting.GRAY);
 
 	public FishAffinityTalisman() {
 		super(ItemProperties.fish_1, Rarity.Rare);

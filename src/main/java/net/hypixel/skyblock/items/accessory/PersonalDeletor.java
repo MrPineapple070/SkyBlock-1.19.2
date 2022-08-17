@@ -4,6 +4,7 @@ import java.util.List;
 
 import net.hypixel.skyblock.items.Rarity;
 import net.hypixel.skyblock.util.ItemProperties;
+import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
@@ -36,7 +37,7 @@ public class PersonalDeletor extends PersonalAccessory {
 		}
 	}
 
-	protected static final Component disc = Component.translatable("accessory.del");
+	protected static final Component info = Component.translatable("accessory.del").withStyle(ChatFormatting.GRAY);
 
 	public PersonalDeletor(Rarity rarity, Type type) {
 		super(ItemProperties.mine_1, rarity, type);
@@ -58,6 +59,6 @@ public class PersonalDeletor extends PersonalAccessory {
 
 	@Override
 	public void appendHoverText(ItemStack stack, Level level, List<Component> tooltip, TooltipFlag flag) {
-		tooltip.add(disc);
+		tooltip.add(info);
 	}
 }
