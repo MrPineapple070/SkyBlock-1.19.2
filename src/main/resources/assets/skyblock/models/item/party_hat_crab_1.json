@@ -1,6 +1,6 @@
 {
-	"parent": "hypixelskyblockmod:item/custom",
+	"parent": "skyblock:item/custom",
 	"textures": {
-		"0": "hypixelskyblockmod:items/party_hat_crab_1"
+		"0": "skyblock:items/accessories/party_hat_crab_1"
 	}
 }

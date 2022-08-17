@@ -8042,7 +8042,7 @@
 	"accessory.piggy.0": "100%",
 	"accessory.piggy.1": "50%",
 	"accessory.piggy.2": "none",
-	"accessory.potato": "Gives +1 %s and increases Potato Minion speed by 5%",
+	"accessory.potato": "Gives +1 %s and increases Potato Minion speed by 5%%",
 	"accessory.potion": "Increases potion duration by %s.",
 	"accessory.red_claw": "Increases %s by %s.",
 	"accessory.scarf": "Gain dungeon class experience %s faster.",

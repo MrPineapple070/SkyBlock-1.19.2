@@ -259,7 +259,7 @@ public class AccessoryInit {
 			SeaCreatureRing::new);
 	public static final RegistryObject<AccessoryItem> sea_creature_talisman = ACCESSORIES
 			.register("sea_creature_talisman", SeaCreatureTalisman::new);
-	public static final RegistryObject<AccessoryItem> seal_of_family = ACCESSORIES.register("seal_of_family",
+	public static final RegistryObject<AccessoryItem> seal_of_the_family = ACCESSORIES.register("seal_of_the_family",
 			SealOfTheFamily::new);
 	public static final RegistryObject<AccessoryItem> shady_ring = ACCESSORIES.register("shady_ring", ShadyRing::new);
 	public static final RegistryObject<AccessoryItem> skeleton_talisman = ACCESSORIES.register("skeleton_talisman",
