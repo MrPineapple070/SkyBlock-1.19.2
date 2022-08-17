@@ -1,0 +1,6 @@
+{
+	"parent": "item/handheld",
+	"textures": {
+		"layer0": "skyblock:items/accessories/potion_affinity_artifact"
+	}
+}

@@ -1,0 +1,6 @@
+{
+	"parent": "item/handheld",
+	"textures": {
+		"layer0": "skyblock:items/accessories/legendary_ring_of_love"
+	}
+}

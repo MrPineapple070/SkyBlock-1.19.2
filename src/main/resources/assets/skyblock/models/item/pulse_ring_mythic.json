@@ -1,0 +1,6 @@
+{
+	"parent": "item/handheld",
+	"textures": {
+		"layer0": "skyblock:items/accessories/pulse_ring_mythic"
+	}
+}

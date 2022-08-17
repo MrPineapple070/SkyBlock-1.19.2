@@ -49,21 +49,6 @@ public final class StatString {
 			.withStyle(ChatFormatting.GREEN);
 
 	@Nonnull
-	public static final String dungeon_star_1 = "\u00A76\u272a\u00A7r";
-
-	@Nonnull
-	public static final String dungeon_star_2 = "\u00A76\u272a\u272a\u00A7r";
-
-	@Nonnull
-	public static final String dungeon_star_3 = "\u00A76\u272a\u272a\u272a\u00A7r";
-
-	@Nonnull
-	public static final String dungeon_star_4 = "\u00A76\u272a\u272a\u272a\u272a\u00A7r";
-
-	@Nonnull
-	public static final String dungeon_star_5 = "\u00A76\u272a\u272a\u272a\u272a\u272a\u00A7r";
-
-	@Nonnull
 	public static final MutableComponent farming_fortune = Component.translatable("stat.farming_fortune")
 			.withStyle(ChatFormatting.GOLD);
 
@@ -110,7 +95,8 @@ public final class StatString {
 			.withStyle(ChatFormatting.YELLOW);
 
 	@Nonnull
-	public static final String night = FormatingCodes.aqua + SpecialCharacters.night + FormatingCodes.reset;
+	public static final MutableComponent night = Component.literal(String.valueOf(SpecialCharacters.night))
+			.withStyle(ChatFormatting.AQUA);
 
 	@Nonnull
 	public static final MutableComponent pet_luck = Component.translatable("stat.pet_luck")
@@ -121,12 +107,12 @@ public final class StatString {
 			.withStyle(ChatFormatting.DARK_PURPLE);
 
 	@Nonnull
-	public static final String reqirement_slayer = FormatingCodes.dark_red + SpecialCharacters.requirement_slayer
-			+ " Required" + FormatingCodes.reset;
+	public static final MutableComponent requirement_slayer = Component
+			.literal(SpecialCharacters.requirement_slayer + " Required").withStyle(ChatFormatting.DARK_RED);
 
 	@Nonnull
-	public static final String requirement = FormatingCodes.dark_red + SpecialCharacters.requirement + " Required"
-			+ FormatingCodes.reset;
+	public static final MutableComponent requirment = Component.literal(SpecialCharacters.requirement + " Required")
+			.withStyle(ChatFormatting.DARK_RED);
 
 	@Nonnull
 	public static final MutableComponent sea_creature_chance = Component.translatable("stat.sea_creature_chance")
@@ -140,17 +126,12 @@ public final class StatString {
 			.withStyle(ChatFormatting.RED);
 
 	@Nonnull
-	public static final String ticker = "%d " + SpecialCharacters.ticker;
-
-	@Nonnull
 	public static final MutableComponent true_def = Component.translatable("stat.true_defense")
 			.withStyle(ChatFormatting.WHITE);
 
-	@Nonnull
-	public static final String powder = "\u1805";
-
 	public static final Component ticker(int ticker) {
-		return Component.literal(StatString.ticker.formatted(ticker)).withStyle(ChatFormatting.YELLOW);
+		return Component.literal(String.format("%d " + SpecialCharacters.ticker, ticker))
+				.withStyle(ChatFormatting.YELLOW);
 	}
 
 	public static final Component dungeon(int value) {
@@ -167,8 +148,14 @@ public final class StatString {
 		else
 			for (int i = 10; i < value; ++i)
 				blue_star += SpecialCharacters.dungeon_star;
+
 		return Component.literal(blue_star).withStyle(ChatFormatting.AQUA)
 				.append(Component.literal(purple_star).withStyle(ChatFormatting.DARK_PURPLE))
 				.append(Component.literal(gold_star).withStyle(ChatFormatting.GOLD));
+	}
+
+	public static final Component powder(int powder, boolean mithril) {
+		return Component.literal(String.format("\u1808 %d", powder))
+				.withStyle(mithril ? ChatFormatting.GREEN : ChatFormatting.LIGHT_PURPLE);
 	}
 }
