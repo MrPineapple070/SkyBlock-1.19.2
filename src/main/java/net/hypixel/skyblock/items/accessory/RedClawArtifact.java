@@ -20,20 +20,22 @@ import net.minecraft.world.level.Level;
  * @version 19 August 2020
  * @since 19 August 2020
  */
-public class RedClawArtifact extends AccessoryItem{
-	private static final Component info = Component.translatable("accessory.red_claw",
-			StatString.crit_damage, "5%").withStyle(ChatFormatting.GRAY);
+public class RedClawArtifact extends AccessoryItem {
+	private static final Component info = Component.translatable("accessory.red_claw", StatString.crit_damage, "5%")
+			.withStyle(ChatFormatting.GRAY);
 
 	public RedClawArtifact() {
 		super(ItemProperties.combat_1, Rarity.Epic);
 	}
 
 	@Override
-	public void appendHoverText(ItemStack stack, Level level, List<Component> tooltip, TooltipFlag flag) {
+	public void appendHoverText(final ItemStack stack, final Level level, final List<Component> tooltip,
+			final TooltipFlag flag) {
 		tooltip.add(info);
 	}
 
 	@Override
-	public void inventoryTick(ItemStack stack, Level level, Entity entity, int slot, boolean selected) {
+	public void inventoryTick(final ItemStack stack, final Level level, final Entity entity, final int slot,
+			final boolean selected) {
 	}
 }

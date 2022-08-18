@@ -26,7 +26,10 @@ import net.minecraft.world.level.Level;
  * @version 10 September 2020
  * @since 10 September 2020
  */
-public class LynxTalisman extends AccessoryItem{
+public class LynxTalisman extends AccessoryItem {
+	private static final Component info = Component.translatable("accessory.lynx", StatString.speed)
+			.withStyle(ChatFormatting.GRAY);
+
 	/**
 	 * An {@link AttributeModifier} that increases {@link Attributes#MOVEMENT_SPEED}
 	 * by 3%
@@ -34,24 +37,21 @@ public class LynxTalisman extends AccessoryItem{
 	public static final AttributeModifier speed_mod = new AttributeModifier(
 			Attributes.MOVEMENT_SPEED.getDescriptionId(), .003, Operation.ADDITION);
 
-	private static final Component info = Component.translatable("accessory.lynx", StatString.speed).withStyle(ChatFormatting.GRAY);
-
 	public LynxTalisman() {
 		super(ItemProperties.combat_1, Rarity.Rare);
 	}
 
 	@Override
-	public void appendHoverText(ItemStack stack, Level level, List<Component> tooltip, TooltipFlag flag) {
+	public void appendHoverText(final ItemStack stack, final Level level, final List<Component> tooltip,
+			final TooltipFlag flag) {
 		tooltip.add(info);
 	}
-	
+
 	@Override
-	public void inventoryTick(ItemStack stack, Level level, Entity entity, int slot, boolean selected) {
-		if (level.isClientSide)
+	public void inventoryTick(final ItemStack stack, final Level level, final Entity entity, final int slot,
+			final boolean selected) {
+		if (level.isClientSide || !(entity instanceof Player player))
 			return;
-		if (!(entity instanceof Player))
-			return;
-		final Player player = (Player) entity;
 		final AttributeInstance spd = player.getAttribute(Attributes.MOVEMENT_SPEED);
 		spd.addTransientModifier(speed_mod);
 	}

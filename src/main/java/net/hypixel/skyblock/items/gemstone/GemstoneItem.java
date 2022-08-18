@@ -9,6 +9,7 @@ import com.google.errorprone.annotations.Immutable;
 
 import net.hypixel.skyblock.items.ModItem;
 import net.hypixel.skyblock.util.ItemProperties;
+import net.hypixel.skyblock.util.ModDimentions;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
@@ -17,13 +18,13 @@ import net.minecraft.world.level.Level;
 
 @Immutable
 public class GemstoneItem extends ModItem {
-	private static final Component rough = Component
-			.translatable("gemstone.rough",
-					Component.translatable("dimention.crystal_hollows").withStyle(ChatFormatting.DARK_PURPLE))
-			.withStyle(ChatFormatting.GRAY);
-
 	private static final Component harness = Component.translatable("gemstone.harness")
 			.withStyle(ChatFormatting.YELLOW);
+
+	private static final Component rough = Component
+			.translatable("gemstone.rough",
+					ModDimentions.crystals.withStyle(ChatFormatting.DARK_PURPLE))
+			.withStyle(ChatFormatting.GRAY);
 
 	@Nonnull
 	public final GemstoneTier tier;
@@ -31,14 +32,15 @@ public class GemstoneItem extends ModItem {
 	@Nonnull
 	public final GemstoneType type;
 
-	public GemstoneItem(@Nonnull GemstoneTier tier, @Nonnull GemstoneType type) {
+	public GemstoneItem(@Nonnull final GemstoneTier tier, @Nonnull final GemstoneType type) {
 		super(ItemProperties.mine_64, tier.rarity);
 		this.tier = Objects.requireNonNull(tier, "GemstoneTier cannot be null");
 		this.type = Objects.requireNonNull(type, "GemstoneType cannot be null");
 	}
 
 	@Override
-	public void appendHoverText(ItemStack stack, Level level, List<Component> tooltip, TooltipFlag flag) {
+	public void appendHoverText(final ItemStack stack, final Level level, final List<Component> tooltip,
+			final TooltipFlag flag) {
 		switch (this.tier) {
 		case Fine:
 			tooltip.add(Component.translatable("gemstone.fine", Component

@@ -12,17 +12,17 @@ public class ModItem extends Item {
 
 	/**
 	 * Constructor
-	 * 
+	 *
 	 * @param properties {@link Properties} of this
 	 * @param rarity     {@link Rarity} of this
 	 */
-	public ModItem(final Item.Properties properties, Rarity rarity) {
+	public ModItem(final Item.Properties properties, final Rarity rarity) {
 		super(properties);
 		this.rarity = rarity;
 	}
 
 	@Override
-	public Component getName(ItemStack stack) {
+	public Component getName(final ItemStack stack) {
 		return Component.translatable(this.getDescriptionId()).withStyle(this.rarity.color);
 	}
 }

@@ -38,15 +38,15 @@ public class NightVisionCharm extends AccessoryItem {
 	}
 
 	@Override
-	public void appendHoverText(ItemStack stack, Level level, List<Component> tooltip, TooltipFlag flag) {
+	public void appendHoverText(final ItemStack stack, final Level level, final List<Component> tooltip,
+			final TooltipFlag flag) {
 		tooltip.add(info);
 	}
 
 	@Override
-	public void inventoryTick(ItemStack stack, Level level, Entity entity, int slot, boolean selected) {
-		if (level.isClientSide)
-			return;
-		if (!(entity instanceof Player))
+	public void inventoryTick(final ItemStack stack, final Level level, final Entity entity, final int slot,
+			final boolean selected) {
+		if (level.isClientSide || !(entity instanceof Player))
 			return;
 		((Player) entity).addEffect(night_vision);
 	}

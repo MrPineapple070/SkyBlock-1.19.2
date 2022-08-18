@@ -22,20 +22,20 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 
 public abstract class ModSwordItem extends SwordItem {
+	protected static final MutableComponent item_ability = Component.translatable("sword.ability");
+
 	/**
 	 * {@link Logger}
 	 */
 	protected static final Logger logger = LogManager.getLogger();
 
-	protected static final MutableComponent item_ability = Component.translatable("sword.ability");
-
 	/**
 	 * {@link Rarity} of this
 	 */
 	@Nonnull
-	private Rarity rarity;
+	private final Rarity rarity;
 
-	public ModSwordItem(Tier tier, Properties properties, Rarity rarity) {
+	public ModSwordItem(final Tier tier, final Properties properties, final Rarity rarity) {
 		super(tier, 0, Float.POSITIVE_INFINITY, properties);
 		this.rarity = Objects.requireNonNull(rarity, "Rarity cannot be null");
 	}
@@ -49,22 +49,22 @@ public abstract class ModSwordItem extends SwordItem {
 	}
 
 	@Override
-	public Component getName(ItemStack stack) {
+	public Component getName(final ItemStack stack) {
 		return Component.translatable(this.getDescriptionId()).withStyle(this.rarity.color);
 	}
 
-	@Override
-	public void inventoryTick(ItemStack stack, Level level, Entity user, int slot, boolean held) {
-		return;
-	}
-
-	@Override
-	public boolean isEnchantable(ItemStack stack) {
-		return true;
-	}
-
 	public Rarity getRarity() {
-		return rarity;
+		return this.rarity;
+	}
+
+	@Override
+	public void inventoryTick(final ItemStack stack, final Level level, final Entity user, final int slot,
+			final boolean held) {
+	}
+
+	@Override
+	public boolean isEnchantable(final ItemStack stack) {
+		return true;
 	}
 
 	@Override

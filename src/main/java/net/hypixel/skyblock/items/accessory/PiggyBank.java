@@ -18,14 +18,17 @@ import net.minecraft.world.level.Level;
  * @author MrPineapple070
  * @version 28 July 2020
  */
-public class PiggyBank extends AccessoryItem{
-	public static enum State {
+public class PiggyBank extends AccessoryItem {
+	public enum State {
 		Broken, Cracked, Normal;
 	}
 
-	private static final Component percent0 = Component.translatable("accessory.piggy.0").withStyle(ChatFormatting.GRAY);
-	private static final Component percent1 = Component.translatable("accessory.piggy.1").withStyle(ChatFormatting.GRAY);
-	private static final Component percent2 = Component.translatable("accessory.piggy.2").withStyle(ChatFormatting.GRAY);
+	private static final Component percent0 = Component.translatable("accessory.piggy.0")
+			.withStyle(ChatFormatting.GRAY);
+	private static final Component percent1 = Component.translatable("accessory.piggy.1")
+			.withStyle(ChatFormatting.GRAY);
+	private static final Component percent2 = Component.translatable("accessory.piggy.2")
+			.withStyle(ChatFormatting.GRAY);
 
 	private State state;
 
@@ -34,25 +37,9 @@ public class PiggyBank extends AccessoryItem{
 		this.state = State.Normal;
 	}
 
-	public void repair() {
-		this.state = State.Normal;
-	}
-
-	public void use() {
-		switch (this.state) {
-		case Normal:
-			this.state = State.Cracked;
-			return;
-		case Cracked:
-			this.state = State.Broken;
-			return;
-		default:
-			return;
-		}
-	}
-
 	@Override
-	public void appendHoverText(ItemStack stack, Level level, List<Component> tooltip, TooltipFlag flag) {
+	public void appendHoverText(final ItemStack stack, final Level level, final List<Component> tooltip,
+			final TooltipFlag flag) {
 		Component percent;
 		switch (this.state) {
 		case Normal:
@@ -71,6 +58,23 @@ public class PiggyBank extends AccessoryItem{
 	}
 
 	@Override
-	public void inventoryTick(ItemStack stack, Level level, Entity entity, int slot, boolean selected) {
+	public void inventoryTick(final ItemStack stack, final Level level, final Entity entity, final int slot,
+			final boolean selected) {
+	}
+
+	public void repair() {
+		this.state = State.Normal;
+	}
+
+	public void use() {
+		switch (this.state) {
+		case Normal:
+			this.state = State.Cracked;
+			return;
+		case Cracked:
+			this.state = State.Broken;
+			return;
+		default:
+		}
 	}
 }

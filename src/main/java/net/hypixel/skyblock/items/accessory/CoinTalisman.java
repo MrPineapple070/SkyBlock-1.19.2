@@ -22,24 +22,26 @@ import net.minecraft.world.level.Level;
  * @author MrPineapple070
  * @version 18 May 2020
  */
-public class CoinTalisman extends AccessoryItem{
-	private static final Component info = Component.translatable("accessory.coin_talisman").withStyle(ChatFormatting.GRAY);
+public class CoinTalisman extends AccessoryItem {
+	private static final Component info = Component.translatable("accessory.coin_talisman")
+			.withStyle(ChatFormatting.GRAY);
 	private int tick;
 
 	public CoinTalisman() {
 		super(ItemProperties.combat_1, Rarity.Common);
 		this.tick = 0;
 	}
+
 	@Override
-	public void appendHoverText(ItemStack stack, Level level, List<Component> tooltip, TooltipFlag flag) {
+	public void appendHoverText(final ItemStack stack, final Level level, final List<Component> tooltip,
+			final TooltipFlag flag) {
 		tooltip.add(info);
 	}
 
 	@Override
-	public void inventoryTick(ItemStack stack, Level level, Entity entity, int slot, boolean selected) {
-		if (level.isClientSide)
-			return;
-		if (!(entity instanceof Player))
+	public void inventoryTick(final ItemStack stack, final Level level, final Entity entity, final int slot,
+			final boolean selected) {
+		if (level.isClientSide || !(entity instanceof Player))
 			return;
 		this.tick = ++this.tick % 6000;
 		if (this.tick == 0)

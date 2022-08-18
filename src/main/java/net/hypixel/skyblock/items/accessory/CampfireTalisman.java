@@ -5,8 +5,6 @@ import java.util.List;
 import javax.annotation.Nonnegative;
 import javax.annotation.Nonnull;
 
-import com.google.common.collect.ImmutableList;
-
 import net.hypixel.skyblock.items.Rarity;
 import net.hypixel.skyblock.util.ItemProperties;
 import net.hypixel.skyblock.util.StatString;
@@ -35,33 +33,6 @@ import net.minecraft.world.level.Level;
  * @version 25 July 2020
  */
 public class CampfireTalisman extends AccessoryItem {
-	/**
-	 * A {@link ImmutableList} of {@link Float} for {@link #heal} based on
-	 * {@link #level}
-	 */
-	@Nonnull
-	private static final ImmutableList<Float> health = ImmutableList.of(.8f, 1.2f, 1.6f, 2f, 2.4f, 2.8f, 3.2f, 3.6f, 4f,
-			4.4f, 4.8f, 5.2f, 5.6f, 6f, 6.4f, 6.8f, 7.2f, 7.6f, 8f, 8.4f, 8.8f, 9.2f, 9.6f, 10f, 10.4f, 10.8f, 11.2f,
-			11.6f, 12f);
-
-	@Nonnull
-	private static final Component level_0 = Component.translatable("campfire_talisman.0")
-			.withStyle(Rarity.Common.color);
-
-	@Nonnull
-	private static final Component level_1 = Component.translatable("campfire_talisman.1")
-			.withStyle(Rarity.Uncommon.color);
-
-	@Nonnull
-	private static final Component level_2 = Component.translatable("campfire_talisman.2").withStyle(Rarity.Rare.color);
-
-	@Nonnull
-	private static final Component level_3 = Component.translatable("campfire_talisman.3").withStyle(Rarity.Epic.color);
-
-	@Nonnull
-	private static final Component level_4 = Component.translatable("campfire_talisman.4")
-			.withStyle(Rarity.Legendary.color);
-
 	public static class CampfireTalisman0 extends CampfireTalisman {
 		public CampfireTalisman0() {
 			super(Rarity.Common, 0);
@@ -92,6 +63,24 @@ public class CampfireTalisman extends AccessoryItem {
 		}
 	}
 
+	@Nonnull
+	private static final Component level_0 = Component.translatable("campfire_talisman.0")
+			.withStyle(Rarity.Common.color);
+
+	@Nonnull
+	private static final Component level_1 = Component.translatable("campfire_talisman.1")
+			.withStyle(Rarity.Uncommon.color);
+
+	@Nonnull
+	private static final Component level_2 = Component.translatable("campfire_talisman.2").withStyle(Rarity.Rare.color);
+
+	@Nonnull
+	private static final Component level_3 = Component.translatable("campfire_talisman.3").withStyle(Rarity.Epic.color);
+
+	@Nonnull
+	private static final Component level_4 = Component.translatable("campfire_talisman.4")
+			.withStyle(Rarity.Legendary.color);
+
 	/**
 	 * The amount of health points this heals per second.<br>
 	 * This number must be positive.
@@ -111,16 +100,18 @@ public class CampfireTalisman extends AccessoryItem {
 	 */
 	private int tick;
 
-	public CampfireTalisman(Rarity rarity, int level) {
+	public CampfireTalisman(final Rarity rarity, final int level) {
 		super(ItemProperties.combat_1, rarity);
 		this.level = level;
-		this.heal = health.get(this.level);
+		this.heal = .8f + .4f * this.level;
 		this.tick = 0;
 	}
 
 	@Override
-	public void appendHoverText(ItemStack stack, Level level, List<Component> tooltip, TooltipFlag flag) {
-		tooltip.add(Component.translatable("accessory.campfire", this.heal, StatString.health).withStyle(ChatFormatting.GRAY));
+	public void appendHoverText(final ItemStack stack, final Level level, final List<Component> tooltip,
+			final TooltipFlag flag) {
+		tooltip.add(Component.translatable("accessory.campfire", this.heal, StatString.health)
+				.withStyle(ChatFormatting.GRAY));
 		tooltip.add(Component.literal(String.valueOf(this.level)).withStyle(ChatFormatting.GRAY));
 	}
 
@@ -132,7 +123,7 @@ public class CampfireTalisman extends AccessoryItem {
 	}
 
 	@Override
-	public Component getName(ItemStack stack) {
+	public Component getName(final ItemStack stack) {
 		if (this.level < 4)
 			return level_0;
 		else if (this.level < 8)
@@ -145,12 +136,10 @@ public class CampfireTalisman extends AccessoryItem {
 	}
 
 	@Override
-	public void inventoryTick(ItemStack stack, Level level, Entity entity, int slot, boolean selected) {
-		if (level.isClientSide)
+	public void inventoryTick(final ItemStack stack, final Level level, final Entity entity, final int slot,
+			final boolean selected) {
+		if (level.isClientSide || !(entity instanceof Player player))
 			return;
-		if (!(entity instanceof Player))
-			return;
-		final Player player = (Player) entity;
 		this.tick = ++this.tick % 20;
 		if (this.tick != 0)
 			return;

@@ -9,7 +9,7 @@ import net.minecraft.network.chat.MutableComponent;
 
 /**
  * Holds commonly used {@link String} and {@link TranslatableComponent}
- * 
+ *
  * @author MrPineapple070
  * @version 12 March 2021
  * @since 11 July 2019
@@ -17,12 +17,12 @@ import net.minecraft.network.chat.MutableComponent;
 @Immutable
 public final class StatString {
 	@Nonnull
-	public static final MutableComponent attack_speed = Component.translatable("stat.attack_speed")
-			.withStyle(ChatFormatting.YELLOW);
-
-	@Nonnull
 	public static final MutableComponent ability_damage = Component.translatable("stat.ability_damage")
 			.withStyle(ChatFormatting.RED);
+
+	@Nonnull
+	public static final MutableComponent attack_speed = Component.translatable("stat.attack_speed")
+			.withStyle(ChatFormatting.YELLOW);
 
 	@Nonnull
 	public static final MutableComponent breaking_power = Component.translatable("stat.breaking_power")
@@ -129,12 +129,7 @@ public final class StatString {
 	public static final MutableComponent true_def = Component.translatable("stat.true_defense")
 			.withStyle(ChatFormatting.WHITE);
 
-	public static final Component ticker(int ticker) {
-		return Component.literal(String.format("%d " + SpecialCharacters.ticker, ticker))
-				.withStyle(ChatFormatting.YELLOW);
-	}
-
-	public static final Component dungeon(int value) {
+	public static Component dungeon(final int value) {
 		if (value < 0 || value > 14)
 			throw new IllegalArgumentException("Illegal essence value:\t" + value);
 
@@ -154,8 +149,13 @@ public final class StatString {
 				.append(Component.literal(gold_star).withStyle(ChatFormatting.GOLD));
 	}
 
-	public static final Component powder(int powder, boolean mithril) {
+	public static Component powder(final int powder, final boolean mithril) {
 		return Component.literal(String.format("\u1808 %d", powder))
 				.withStyle(mithril ? ChatFormatting.GREEN : ChatFormatting.LIGHT_PURPLE);
+	}
+
+	public static Component ticker(final int ticker) {
+		return Component.literal(String.format("%d " + SpecialCharacters.ticker, ticker))
+				.withStyle(ChatFormatting.YELLOW);
 	}
 }

@@ -29,7 +29,7 @@ import net.minecraft.world.level.block.state.BlockState;
  * @author MrPineapple070
  * @version 25 July 2020
  */
-public class FarmerOrb extends AccessoryItem{
+public class FarmerOrb extends AccessoryItem {
 	private static final ImmutableList<Integer> dx = ImmutableList
 			.copyOf(Arrays.asList(-8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7));
 	private static final ImmutableList<Integer> dy = ImmutableList
@@ -40,7 +40,7 @@ public class FarmerOrb extends AccessoryItem{
 	private static final Component info = Component.translatable("accessory.farmer_orb").withStyle(ChatFormatting.GRAY);
 
 	private final BlockPos[][][] nearby = new BlockPos[16][16][16];
-	
+
 	@Nonnull
 	private BlockPos pos;
 
@@ -50,22 +50,21 @@ public class FarmerOrb extends AccessoryItem{
 	}
 
 	@Override
-	public void appendHoverText(ItemStack stack, Level level, List<Component> tooltip, TooltipFlag flag) {
+	public void appendHoverText(final ItemStack stack, final Level level, final List<Component> tooltip,
+			final TooltipFlag flag) {
 		tooltip.add(info);
 	}
 
 	@Override
-	public void inventoryTick(ItemStack stack, Level level, Entity entity, int slot, boolean selected) {
-		if (!(level instanceof ServerLevel))
+	public void inventoryTick(final ItemStack stack, final Level level, final Entity entity, final int slot,
+			final boolean selected) {
+		if (!(level instanceof ServerLevel) || !(entity instanceof Player player))
 			return;
-		if (!(entity instanceof Player))
-			return;
-		Player player = (Player) entity;
-		if (! player.blockPosition().equals(this.pos))
+		if (!player.blockPosition().equals(this.pos))
 			this.setNearby(player);
-		
+
 		for (final BlockPos[][] y : this.nearby)
-			for (final BlockPos[] x: y)
+			for (final BlockPos[] x : y)
 				for (final BlockPos pos : x) {
 					if (level.isInWorldBounds(pos))
 						continue;
@@ -78,12 +77,12 @@ public class FarmerOrb extends AccessoryItem{
 				}
 	}
 
-	private void setNearby(Player player) {
+	private void setNearby(final Player player) {
 		this.pos = player.blockPosition();
 		for (int i = 0; i < this.nearby.length; i++)
 			for (int j = 0; j < this.nearby[i].length; j++)
 				for (int k = 0; k < this.nearby[i][j].length; k++)
-					this.nearby[i][j][k] = new BlockPos(pos.getX() + dx.get(j), pos.getY() + dy.get(i),
-							pos.getZ() + dz.get(k));
+					this.nearby[i][j][k] = new BlockPos(this.pos.getX() + dx.get(j), this.pos.getY() + dy.get(i),
+							this.pos.getZ() + dz.get(k));
 	}
 }

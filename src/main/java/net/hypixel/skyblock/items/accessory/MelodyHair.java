@@ -25,8 +25,9 @@ import net.minecraft.world.level.Level;
  * @author MrPineapple070
  * @version 28 July 2020
  */
-public class MelodyHair extends AccessoryItem{
-	private static final Component info = Component.translatable("accessory.melody", StatString.intelligence).withStyle(ChatFormatting.GRAY);
+public class MelodyHair extends AccessoryItem {
+	private static final Component info = Component.translatable("accessory.melody", StatString.intelligence)
+			.withStyle(ChatFormatting.GRAY);
 
 	private int currentPitch;
 
@@ -36,12 +37,18 @@ public class MelodyHair extends AccessoryItem{
 	}
 
 	@Override
-	public void appendHoverText(ItemStack stack, Level level, List<Component> tooltip, TooltipFlag flag) {
+	public void appendHoverText(final ItemStack stack, final Level level, final List<Component> tooltip,
+			final TooltipFlag flag) {
 		tooltip.add(info);
 	}
 
 	@Override
-	public boolean onBlockStartBreak(ItemStack itemstack, BlockPos pos, Player player) {
+	public void inventoryTick(final ItemStack stack, final Level level, final Entity entity, final int slot,
+			final boolean selected) {
+	}
+
+	@Override
+	public boolean onBlockStartBreak(final ItemStack itemstack, final BlockPos pos, final Player player) {
 		if (player.level.isClientSide)
 			return false;
 		if (++this.currentPitch == 13)
@@ -50,14 +57,11 @@ public class MelodyHair extends AccessoryItem{
 	}
 
 	@Override
-	public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
-		level.playSound(player, player.blockPosition(), SoundEvents.NOTE_BLOCK_HARP, SoundSource.MUSIC, (float) Math.pow(2, this.currentPitch / 12), 1f);
+	public InteractionResultHolder<ItemStack> use(final Level level, final Player player, final InteractionHand hand) {
+		level.playSound(player, player.blockPosition(), SoundEvents.NOTE_BLOCK_HARP, SoundSource.MUSIC,
+				(float) Math.pow(2, this.currentPitch / 12), 1f);
 		return InteractionResultHolder.success(player.getItemInHand(hand));
 	}
 
-	@Override
-	public void inventoryTick(ItemStack stack, Level level, Entity entity, int slot, boolean selected) {
-	}
-	
 	// FIXME Figure out left click behavior
 }

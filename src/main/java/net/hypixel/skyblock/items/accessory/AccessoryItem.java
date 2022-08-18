@@ -2,6 +2,8 @@ package net.hypixel.skyblock.items.accessory;
 
 import java.util.List;
 
+import javax.annotation.Nonnull;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -19,22 +21,27 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 
 public abstract class AccessoryItem extends ModItem {
+	/**
+	 * Directly reference a slf4j {@link Logger}
+	 */
+	@Nonnull
 	protected static final Logger logger = LogManager.getLogger();
 
-	public AccessoryItem(Properties properties, Rarity rarity) {
+	public AccessoryItem(final Properties properties, final Rarity rarity) {
 		super(properties, rarity);
 	}
 
 	@Override
-	public abstract void appendHoverText(ItemStack stack, Level level, List<Component> tooltip, TooltipFlag flag);
+	public abstract void appendHoverText(final ItemStack stack, final Level level, final List<Component> tooltip,
+			final TooltipFlag flag);
 
 	@Override
-	public boolean canApplyAtEnchantingTable(ItemStack stack, Enchantment enchantment) {
+	public boolean canApplyAtEnchantingTable(final ItemStack stack, final Enchantment enchantment) {
 		return false;
 	}
 
 	@Override
-	public boolean canAttackBlock(BlockState state, Level level, BlockPos pos, Player player) {
+	public boolean canAttackBlock(final BlockState state, final Level level, final BlockPos pos, final Player player) {
 		return false;
 	}
 
@@ -44,20 +51,21 @@ public abstract class AccessoryItem extends ModItem {
 	}
 
 	@Override
-	public int getBurnTime(ItemStack stack, RecipeType<?> recipeType) {
+	public int getBurnTime(final ItemStack stack, final RecipeType<?> recipeType) {
 		return 0;
 	}
 
 	@Override
-	public abstract void inventoryTick(ItemStack stack, Level level, Entity entity, int slot, boolean selected);
+	public abstract void inventoryTick(final ItemStack stack, final Level level, final Entity entity, final int slot,
+			final boolean selected);
 
 	@Override
-	public boolean isBookEnchantable(ItemStack stack, ItemStack book) {
+	public boolean isBookEnchantable(final ItemStack stack, final ItemStack book) {
 		return false;
 	}
 
 	@Override
-	public boolean isEnchantable(ItemStack stack) {
+	public boolean isEnchantable(final ItemStack stack) {
 		return false;
 	}
 }

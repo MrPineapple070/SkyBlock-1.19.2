@@ -23,19 +23,22 @@ import net.minecraft.world.level.biome.Biome;
  * @author MrPineapple070
  * @version 29 July 2020
  */
-public class VillageAffinityTalisman extends AccessoryItem{
-	private static final Component info = Component.translatable("accessory.village", StatString.speed).withStyle(ChatFormatting.GRAY);
+public class VillageAffinityTalisman extends AccessoryItem {
+	private static final Component info = Component.translatable("accessory.village", StatString.speed)
+			.withStyle(ChatFormatting.GRAY);
 
 	public VillageAffinityTalisman() {
 		super(ItemProperties.combat_1, Rarity.Common);
 	}
 
 	@Override
-	public void appendHoverText(ItemStack stack, Level level, List<Component> tooltip, TooltipFlag flag) {
+	public void appendHoverText(final ItemStack stack, final Level level, final List<Component> tooltip,
+			final TooltipFlag flag) {
 		tooltip.add(info);
 	}
 
 	@Override
-	public void inventoryTick(ItemStack stack, Level level, Entity entity, int slot, boolean selected) {
+	public void inventoryTick(final ItemStack stack, final Level level, final Entity entity, final int slot,
+			final boolean selected) {
 	}
 }

@@ -16,20 +16,30 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 /**
- * 
+ *
  * @author MrPineapple070
  */
 @Mod(SkyblockMod.MODID)
 public class SkyblockMod {
-	/**
-	 * Define mod id in a common place for everything to reference
-	 */
-	public static final String MODID = "skyblock";
+	@Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
+	public static class ClientModEvents {
+		@SubscribeEvent
+		public static void onClientSetup(final FMLClientSetupEvent event) {
+			// Some client setup code
+			LOGGER.info("HELLO FROM CLIENT SETUP");
+			LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
+		}
+	}
 
 	/**
 	 * Directly reference a slf4j {@link Logger}
 	 */
 	public static final Logger LOGGER = LogUtils.getLogger();
+
+	/**
+	 * Define mod id in a common place for everything to reference
+	 */
+	public static final String MODID = "skyblock";
 
 	public SkyblockMod() {
 		final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -53,18 +63,8 @@ public class SkyblockMod {
 	}
 
 	@SubscribeEvent
-	public void onServerStarting(ServerStartingEvent event) {
+	public void onServerStarting(final ServerStartingEvent event) {
 		// Do something when the server starts
 		LOGGER.info("HELLO from server starting");
-	}
-
-	@Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
-	public static class ClientModEvents {
-		@SubscribeEvent
-		public static void onClientSetup(FMLClientSetupEvent event) {
-			// Some client setup code
-			LOGGER.info("HELLO FROM CLIENT SETUP");
-			LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
-		}
 	}
 }

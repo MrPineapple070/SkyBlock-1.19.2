@@ -1,6 +1,6 @@
 {
-	"parent": "hypixelskyblockmod:item/custom",
+	"parent": "item/handheld",
 	"textures": {
-		"0": "hypixelskyblockmod:items/minnow_bait"
+		"layer0": "skyblock:items/bait/minnow_bait"
 	}
 }

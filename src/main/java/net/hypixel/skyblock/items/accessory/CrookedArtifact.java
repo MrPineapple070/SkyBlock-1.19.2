@@ -19,19 +19,22 @@ import net.minecraft.world.level.Level;
  * @author MrPineapple070
  * @version 25 July 2020
  */
-public class CrookedArtifact extends AccessoryItem{
-	private static final Component info = Component.translatable("accessory.crooked_artifact").withStyle(ChatFormatting.GRAY);
+public class CrookedArtifact extends AccessoryItem {
+	private static final Component info = Component.translatable("accessory.crooked_artifact")
+			.withStyle(ChatFormatting.GRAY);
 
 	public CrookedArtifact() {
 		super(ItemProperties.combat_1, Rarity.Rare);
 	}
 
 	@Override
-	public void appendHoverText(ItemStack stack, Level level, List<Component> tooltip, TooltipFlag flag) {
+	public void appendHoverText(final ItemStack stack, final Level level, final List<Component> tooltip,
+			final TooltipFlag flag) {
 		tooltip.add(info);
 	}
 
 	@Override
-	public void inventoryTick(ItemStack stack, Level level, Entity entity, int slot, boolean selected) {
+	public void inventoryTick(final ItemStack stack, final Level level, final Entity entity, final int slot,
+			final boolean selected) {
 	}
 }

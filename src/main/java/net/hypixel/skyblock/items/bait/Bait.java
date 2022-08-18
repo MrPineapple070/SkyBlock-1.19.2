@@ -1,10 +1,26 @@
 package net.hypixel.skyblock.items.bait;
 
-import net.hypixel.skyblock.util.ItemProperties;
-import net.minecraft.world.item.Item;
+import java.util.List;
 
-public class Bait extends Item {
-	public Bait() {
-		super(ItemProperties.fish_64);
+import net.hypixel.skyblock.items.ModItem;
+import net.hypixel.skyblock.items.Rarity;
+import net.hypixel.skyblock.util.ItemProperties;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.level.Level;
+
+public abstract class Bait extends ModItem {
+	public Bait(final Rarity rarity) {
+		super(ItemProperties.fish_64, rarity);
+	}
+
+	@Override
+	public abstract void appendHoverText(final ItemStack stack, final Level level, final List<Component> tooltip,
+			final TooltipFlag flag);
+	
+	@Override
+	public Component getName(ItemStack stack) {
+		return Component.translatable(this.getDescriptionId()).withStyle(rarity.color);
 	}
 }

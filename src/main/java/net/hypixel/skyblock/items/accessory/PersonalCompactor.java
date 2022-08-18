@@ -59,13 +59,19 @@ public class PersonalCompactor extends PersonalAccessory {
 
 	private static final Component info = Component.translatable("accessory.comp").withStyle(ChatFormatting.GRAY);
 
-	protected PersonalCompactor(Rarity rarity, Type type) {
+	protected PersonalCompactor(final Rarity rarity, final Type type) {
 		super(ItemProperties.mine_1, rarity, type);
 	}
 
-	protected int[] getSuperCompIndex(Item item) {
+	@Override
+	public void appendHoverText(final ItemStack stack, final Level level, final List<Component> tooltip,
+			final TooltipFlag flag) {
+		tooltip.add(info);
+	}
+
+	protected int[] getSuperCompIndex(final Item item) {
 		logger.info("Finding super compactor indexes for: " + item.getDescriptionId());
-		int[] indexs = new int[3];
+		final int[] indexs = new int[3];
 		int index = 0;
 		boolean half = false;
 		for (int i = this.items.size() - 1; i > -1; i--) {
@@ -93,15 +99,13 @@ public class PersonalCompactor extends PersonalAccessory {
 	}
 
 	@Override
-	public void inventoryTick(ItemStack stack, Level level, Entity entity, int slot, boolean selected) {
-		if (level.isClientSide)
+	public void inventoryTick(final ItemStack stack, final Level level, final Entity entity, final int slot,
+			final boolean selected) {
+		if (level.isClientSide || !(entity instanceof Player player))
 			return;
-		if (!(entity instanceof Player))
-			return;
-		final Player player = (Player) entity;
-		for (ItemStack st : this.items) {
-			Item item = st.getItem();
-			Integer count = ItemMap.enchReqMap.get(item);
+		for (final ItemStack st : this.items) {
+			final Item item = st.getItem();
+			final Integer count = ItemMap.enchReqMap.get(item);
 			if (count == null)
 				continue;
 			if (player.getInventory().countItem(item) >= count.intValue())
@@ -113,10 +117,5 @@ public class PersonalCompactor extends PersonalAccessory {
 						this.removeStackFromSlot(index);
 				}
 		}
-	}
-
-	@Override
-	public void appendHoverText(ItemStack stack, Level level, List<Component> tooltip, TooltipFlag flag) {
-		tooltip.add(info);
 	}
 }

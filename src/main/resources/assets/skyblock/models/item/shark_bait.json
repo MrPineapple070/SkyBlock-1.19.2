@@ -1,6 +1,6 @@
 {
-	"parent": "hypixelskyblockmod:item/custom",
+	"parent": "item/handheld",
 	"textures": {
-		"0": "hypixelskyblockmod:items/shark_bait"
+		"layer0": "skyblock:items/bait/shark_bait"
 	}
 }

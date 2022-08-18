@@ -25,7 +25,10 @@ import net.minecraft.world.level.Level;
  * @author MrPineapple070
  * @version 26 July 2020
  */
-public class CheetahTalisman extends AccessoryItem{
+public class CheetahTalisman extends AccessoryItem {
+	private static final Component info = Component.translatable("accessory.cheetah_talisman", StatString.speed)
+			.withStyle(ChatFormatting.GRAY);
+
 	/**
 	 * An {@link AttributeModifier} that increases {@link Attributes#MOVEMENT_SPEED}
 	 * by 2%
@@ -33,25 +36,21 @@ public class CheetahTalisman extends AccessoryItem{
 	public static final AttributeModifier speed_mod = new AttributeModifier(
 			Attributes.MOVEMENT_SPEED.getDescriptionId(), .002, Operation.ADDITION);
 
-	private static final Component info = Component.translatable("accessory.cheetah_talisman",
-			StatString.speed).withStyle(ChatFormatting.GRAY);
-
 	public CheetahTalisman() {
 		super(ItemProperties.combat_1, Rarity.Epic);
 	}
 
 	@Override
-	public void appendHoverText(ItemStack stack, Level level, List<Component> tooltip, TooltipFlag flag) {
+	public void appendHoverText(final ItemStack stack, final Level level, final List<Component> tooltip,
+			final TooltipFlag flag) {
 		tooltip.add(info);
 	}
 
 	@Override
-	public void inventoryTick(ItemStack stack, Level worldIn, Entity entityIn, int slot, boolean selected) {
-		if (worldIn.isClientSide)
+	public void inventoryTick(final ItemStack stack, final Level worldIn, final Entity entityIn, final int slot,
+			final boolean selected) {
+		if (worldIn.isClientSide || !(entityIn instanceof Player player))
 			return;
-		if (!(entityIn instanceof Player))
-			return;
-		final Player player = (Player) entityIn;
 		final AttributeInstance spd = player.getAttribute(Attributes.MOVEMENT_SPEED);
 		try {
 			spd.addTransientModifier(speed_mod);

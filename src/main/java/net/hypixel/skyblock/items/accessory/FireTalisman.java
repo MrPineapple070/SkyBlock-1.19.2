@@ -20,7 +20,7 @@ import net.minecraft.world.level.Level;
  * @author MrPineapple070
  * @version 26 July 2020
  */
-public class FireTalisman extends AccessoryItem{
+public class FireTalisman extends AccessoryItem {
 	private static final MobEffectInstance fire = new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 1);
 	private static final Component info = Component.translatable("accessory.fire").withStyle(ChatFormatting.GRAY);
 
@@ -29,17 +29,16 @@ public class FireTalisman extends AccessoryItem{
 	}
 
 	@Override
-	public void appendHoverText(ItemStack stack, Level world, List<Component> tooltip, TooltipFlag flag) {
+	public void appendHoverText(final ItemStack stack, final Level world, final List<Component> tooltip,
+			final TooltipFlag flag) {
 		tooltip.add(info);
 	}
 
 	@Override
-	public void inventoryTick(ItemStack stack, Level level, Entity entity, int slot, boolean selected) {
-		if (level.isClientSide)
+	public void inventoryTick(final ItemStack stack, final Level level, final Entity entity, final int slot,
+			final boolean selected) {
+		if (level.isClientSide || !(entity instanceof Player player))
 			return;
-		if (!(entity instanceof Player))
-			return;
-		final Player player = (Player) entity;
 		player.addEffect(fire);
 	}
 }

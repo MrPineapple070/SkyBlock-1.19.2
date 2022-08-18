@@ -18,7 +18,7 @@ public enum GemstoneType {
 	@Nonnull
 	public final Component stat;
 
-	private GemstoneType(@Nonnull final Component stat) {
+	GemstoneType(@Nonnull final Component stat) {
 		this.stat = Objects.requireNonNull(stat, "StatString cannot be null");
 	}
 }

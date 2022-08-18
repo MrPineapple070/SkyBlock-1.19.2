@@ -31,25 +31,22 @@ public class BaitRing extends AccessoryItem {
 	}
 
 	@Override
-	public void appendHoverText(ItemStack stack, Level level, List<Component> tooltip, TooltipFlag flag) {
+	public void appendHoverText(final ItemStack stack, final Level level, final List<Component> tooltip,
+			final TooltipFlag flag) {
 		tooltip.add(info);
 	}
 
 	@Override
-	public void inventoryTick(ItemStack stack, Level level, Entity entity, int slot, boolean selected) {
-		if (level.isClientSide)
-			return;
-		if (!(entity instanceof Player))
-			return;
-		final Player player = (Player) entity;
-		if (player.fishing == null)
+	public void inventoryTick(final ItemStack stack, final Level level, final Entity entity, final int slot,
+			final boolean selected) {
+		if (level.isClientSide || !(entity instanceof final Player player) || (player.fishing == null))
 			return;
 		if (level.getRandom().nextInt(100) >= 5)
 			logger.debug("Bait consume");
 	}
 
 	@Override
-	public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
+	public InteractionResultHolder<ItemStack> use(final Level level, final Player player, final InteractionHand hand) {
 		return InteractionResultHolder.pass(player.getItemInHand(hand));
 	}
 }

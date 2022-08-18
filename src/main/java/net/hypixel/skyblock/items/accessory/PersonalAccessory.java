@@ -14,7 +14,7 @@ import net.minecraft.core.NonNullList;
 import net.minecraft.world.item.ItemStack;
 
 public abstract class PersonalAccessory extends AccessoryItem {
-	public static enum Type {
+	public enum Type {
 		Type4, Type5, Type6, Type7;
 	}
 
@@ -32,7 +32,7 @@ public abstract class PersonalAccessory extends AccessoryItem {
 	@Nonnull
 	protected final Type type;
 
-	public PersonalAccessory(Properties properties, Rarity rarity, Type type) {
+	public PersonalAccessory(final Properties properties, final Rarity rarity, final Type type) {
 		super(properties, rarity);
 		this.type = Objects.requireNonNull(type, "PersonalAccessory.Type cannot be null");
 		switch (this.type) {
@@ -55,22 +55,22 @@ public abstract class PersonalAccessory extends AccessoryItem {
 
 	/**
 	 * Decreases {@link ItemStack} in indicated index by count. Edits {@link #items}
-	 * 
+	 *
 	 * @param index index to decrease
 	 * @param count amount to decrease by
 	 * @return {@link ItemStackHelper#removeItem(List, int, int)}
 	 */
-	public ItemStack decrStackSize(int index, int count) {
-		return ItemStackHelper.removeItem(items, index, count);
+	public ItemStack decrStackSize(final int index, final int count) {
+		return ItemStackHelper.removeItem(this.items, index, count);
 	}
 
 	/**
 	 * Removed {@link ItemStack} in indecated index. Edits {@link #items}
-	 * 
+	 *
 	 * @param index index to remove
 	 * @return removed {@link ItemStack}
 	 */
-	public ItemStack removeStackFromSlot(int index) {
+	public ItemStack removeStackFromSlot(final int index) {
 		return ItemStackHelper.takeItem(this.items, index);
 	}
 }

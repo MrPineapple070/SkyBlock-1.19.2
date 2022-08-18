@@ -12,6 +12,13 @@ import javax.annotation.concurrent.Immutable;
 @Immutable
 public final class SpecialCharacters {
 	/**
+	 * <a href="https://wiki.hypixel.net/Ability_Damage">Ability Damage</a>
+	 * statistic character.<br>
+	 * &#x2739;
+	 */
+	public static final char ability_damage = 0x2739;
+
+	/**
 	 * &#x27b5;
 	 */
 	@Deprecated
@@ -25,13 +32,6 @@ public final class SpecialCharacters {
 	public static final char attack_speed = 0x2694;
 
 	/**
-	 * <a href="https://wiki.hypixel.net/Ability_Damage">Ability Damage</a>
-	 * statistic character.<br>
-	 * &#x2739;
-	 */
-	public static final char ability_damage = 0x2739;
-
-	/**
 	 * &#x1fa93;
 	 */
 	@Deprecated
@@ -43,14 +43,14 @@ public final class SpecialCharacters {
 	public static final char boss = 0x269a;
 
 	/**
-	 * &#xfd3e;
-	 */
-	public static final char boss_name_start = 0xfd3e;
-
-	/**
 	 * &#xfd3f;
 	 */
 	public static final char boss_name_end = 0xfd3f;
+
+	/**
+	 * &#xfd3e;
+	 */
+	public static final char boss_name_start = 0xfd3e;
 
 	/**
 	 * &#x1f3f9;

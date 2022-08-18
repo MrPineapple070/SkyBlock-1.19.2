@@ -12,7 +12,7 @@ public enum GemstoneTier {
 	@Nonnull
 	public final Rarity rarity;
 
-	private GemstoneTier(Rarity rarity) {
+	GemstoneTier(final Rarity rarity) {
 		this.rarity = Objects.requireNonNull(rarity, "Rarity cannot be null");
 	}
 }

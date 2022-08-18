@@ -89,13 +89,14 @@ public class WeddingRing extends AccessoryItem {
 	 */
 	protected final int chance;
 
-	protected WeddingRing(Rarity rarity, int chance) {
+	protected WeddingRing(final Rarity rarity, final int chance) {
 		super(ItemProperties.combat_1, rarity);
 		this.chance = chance;
 	}
 
 	@Override
-	public void appendHoverText(ItemStack stack, Level level, List<Component> tooltip, TooltipFlag flag) {
+	public void appendHoverText(final ItemStack stack, final Level level, final List<Component> tooltip,
+			final TooltipFlag flag) {
 		tooltip.add(Component.translatable("accessory.wedding", this.chance).withStyle(ChatFormatting.GRAY));
 	}
 
@@ -118,6 +119,7 @@ public class WeddingRing extends AccessoryItem {
 	}
 
 	@Override
-	public void inventoryTick(ItemStack stack, Level level, Entity entity, int slot, boolean selected) {
+	public void inventoryTick(final ItemStack stack, final Level level, final Entity entity, final int slot,
+			final boolean selected) {
 	}
 }

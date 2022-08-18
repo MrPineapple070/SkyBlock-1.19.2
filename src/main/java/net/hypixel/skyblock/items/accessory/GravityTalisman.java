@@ -24,26 +24,26 @@ import net.minecraft.world.level.storage.LevelData;
  * @author MrPineapple070
  * @version 25 July 2020
  */
-public class GravityTalisman extends AccessoryItem{
-	private static final Component info = Component.translatable("accessory.gravity", StatString.strength,
-			StatString.defense).withStyle(ChatFormatting.GRAY);
+public class GravityTalisman extends AccessoryItem {
+	private static final Component info = Component
+			.translatable("accessory.gravity", StatString.strength, StatString.defense).withStyle(ChatFormatting.GRAY);
 
 	public GravityTalisman() {
 		super(ItemProperties.mine_1, Rarity.Uncommon);
 	}
 
 	@Override
-	public void appendHoverText(ItemStack stack, Level level, List<Component> tooltip, TooltipFlag flag) {
+	public void appendHoverText(final ItemStack stack, final Level level, final List<Component> tooltip,
+			final TooltipFlag flag) {
 		tooltip.add(info);
 	}
 
 	@Override
-	public void inventoryTick(ItemStack stack, Level level, Entity entity, int slot, boolean selected) {
-		if (level.isClientSide)
+	public void inventoryTick(final ItemStack stack, final Level level, final Entity entity, final int slot,
+			final boolean selected) {
+		if (level.isClientSide || !(entity instanceof Player))
 			return;
-		if (!(entity instanceof Player))
-			return;
-		LevelData data = level.getLevelData();
+		final LevelData data = level.getLevelData();
 		final Player player = (Player) entity;
 		final BlockPos spawn = new BlockPos(data.getXSpawn(), data.getYSpawn(), data.getZSpawn());
 		spawn.distSqr(player.blockPosition());

@@ -28,12 +28,13 @@ public class AspectOfTheVoid extends ModSwordItem {
 	}
 
 	@Override
-	public void appendHoverText(ItemStack stack, Level level, List<Component> tooltip, TooltipFlag flag) {
+	public void appendHoverText(final ItemStack stack, final Level level, final List<Component> tooltip,
+			final TooltipFlag flag) {
 		tooltip.addAll(AspectOfTheVoid.tooltip);
 	}
 
 	@Override
-	public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
+	public InteractionResultHolder<ItemStack> use(final Level level, final Player player, final InteractionHand hand) {
 		final ItemStack held = player.getItemInHand(hand);
 		if (!level.isClientSide)
 			return InteractionResultHolder.pass(held);

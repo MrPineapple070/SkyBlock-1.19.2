@@ -39,26 +39,25 @@ public class PersonalDeletor extends PersonalAccessory {
 
 	protected static final Component info = Component.translatable("accessory.del").withStyle(ChatFormatting.GRAY);
 
-	public PersonalDeletor(Rarity rarity, Type type) {
+	public PersonalDeletor(final Rarity rarity, final Type type) {
 		super(ItemProperties.mine_1, rarity, type);
 	}
 
 	@Override
-	public void inventoryTick(ItemStack stack, Level level, Entity entity, int slot, boolean selected) {
-		if (level.isClientSide)
+	public void appendHoverText(final ItemStack stack, final Level level, final List<Component> tooltip,
+			final TooltipFlag flag) {
+		tooltip.add(info);
+	}
+
+	@Override
+	public void inventoryTick(final ItemStack stack, final Level level, final Entity entity, final int slot,
+			final boolean selected) {
+		if (level.isClientSide || !(entity instanceof Player player))
 			return;
-		if (!(entity instanceof Player))
-			return;
-		Player player = (Player) entity;
-		for (ItemStack s : this.items) {
+		for (final ItemStack s : this.items) {
 			if (stack.isEmpty())
 				continue;
 			player.getInventory().removeItem(s);
 		}
-	}
-
-	@Override
-	public void appendHoverText(ItemStack stack, Level level, List<Component> tooltip, TooltipFlag flag) {
-		tooltip.add(info);
 	}
 }

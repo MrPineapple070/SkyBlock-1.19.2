@@ -20,19 +20,22 @@ import net.minecraft.world.level.Level;
  * @author MrPineapple070
  * @version 28 July 2020
  */
-public class NewYearCakeBag extends AccessoryItem{
-	private static final Component info = Component.translatable("accessory.new", StatString.speed).withStyle(ChatFormatting.GRAY);
+public class NewYearCakeBag extends AccessoryItem {
+	private static final Component info = Component.translatable("accessory.new", StatString.speed)
+			.withStyle(ChatFormatting.GRAY);
 
 	public NewYearCakeBag() {
 		super(ItemProperties.combat_1, Rarity.Uncommon);
 	}
 
 	@Override
-	public void appendHoverText(ItemStack stack, Level level, List<Component> tooltip, TooltipFlag flag) {
+	public void appendHoverText(final ItemStack stack, final Level level, final List<Component> tooltip,
+			final TooltipFlag flag) {
 		tooltip.add(info);
 	}
 
 	@Override
-	public void inventoryTick(ItemStack stack, Level level, Entity entity, int slot, boolean selected) {
+	public void inventoryTick(final ItemStack stack, final Level level, final Entity entity, final int slot,
+			final boolean selected) {
 	}
 }

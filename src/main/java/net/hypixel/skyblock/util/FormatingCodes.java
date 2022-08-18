@@ -32,6 +32,11 @@ public class FormatingCodes {
 	public static final String blue = "\u00A79";
 
 	/**
+	 * <b>Bold</b>
+	 */
+	public static final String bold = "\u00A7l";
+
+	/**
 	 * <font style="color:#00AAAA">Dark Aqua</font>
 	 */
 	public static final String dark_aqua = "\u00A73";
@@ -77,39 +82,24 @@ public class FormatingCodes {
 	public static final String green = "\u00A7a";
 
 	/**
-	 * <font style="color:#FF55FF">Light Purple</font>
-	 */
-	public static final String light_purple = "\u00A7d";
-
-	/**
-	 * <font style="color:#FF5555">Red</font>
-	 */
-	public static final String red = "\u00A7c";
-
-	/**
-	 * <font style="color:#FFFFFF">White</font>
-	 */
-	public static final String white = "\u00A7f";
-
-	/**
-	 * <font style="color:#FFFF55">Yellow</font>
-	 */
-	public static final String yellow = "\u00A7e";
-
-	/**
-	 * <b>Bold</b>
-	 */
-	public static final String bold = "\u00A7l";
-
-	/**
 	 * <i>Italic</i>
 	 */
 	public static final String italic = "\u00A7o";
 
 	/**
+	 * <font style="color:#FF55FF">Light Purple</font>
+	 */
+	public static final String light_purple = "\u00A7d";
+
+	/**
 	 * Obfuscated
 	 */
 	public static final String obfuscated = "\u00A7k";
+
+	/**
+	 * <font style="color:#FF5555">Red</font>
+	 */
+	public static final String red = "\u00A7c";
 
 	/**
 	 * Reset formating.
@@ -127,12 +117,22 @@ public class FormatingCodes {
 	public static final String underline = "\u00A7n";
 
 	/**
+	 * <font style="color:#FFFFFF">White</font>
+	 */
+	public static final String white = "\u00A7f";
+
+	/**
+	 * <font style="color:#FFFF55">Yellow</font>
+	 */
+	public static final String yellow = "\u00A7e";
+
+	/**
 	 * Convert {@link ChatFormatting} into its {@link String} representation.
-	 * 
+	 *
 	 * @param format {@link ChatFormatting} to convert.
 	 * @return {@link String} converted from {@link ChatFormatting}
 	 */
-	public static final String getColorCode(ChatFormatting format) {
+	public static final String getColorCode(final ChatFormatting format) {
 		switch (format) {
 		case AQUA:
 			return aqua;
@@ -185,11 +185,11 @@ public class FormatingCodes {
 
 	/**
 	 * Convert {@link DyeColor} into {@link ChatFormatting}.
-	 * 
+	 *
 	 * @param color {@link DyeColor} to convert
 	 * @return {@link ChatFormatting} converted
 	 */
-	public static final ChatFormatting getColorCode(DyeColor color) {
+	public static final ChatFormatting getColorCode(final DyeColor color) {
 		switch (color) {
 		case BLACK:
 			return ChatFormatting.BLACK;

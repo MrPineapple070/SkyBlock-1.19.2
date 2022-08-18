@@ -5,19 +5,11 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 
 public class ItemTab {
-	public static final CreativeModeTab farm = new CreativeModeTab(CreativeModeTab.TABS.length, "farm") {
+	public static final CreativeModeTab boss = new CreativeModeTab(CreativeModeTab.TABS.length, "boss") {
 		@Override
 		public ItemStack makeIcon() {
-			return new ItemStack(Items.GOLDEN_HOE);
+			return new ItemStack(Items.WITHER_SKELETON_SKULL);
 		}
-	};
-
-	public static final CreativeModeTab mine = new CreativeModeTab(CreativeModeTab.TABS.length, "mine") {
-		@Override
-		public ItemStack makeIcon() {
-			return new ItemStack(Items.STONE_PICKAXE);
-		}
-
 	};
 
 	public static final CreativeModeTab combat = new CreativeModeTab(CreativeModeTab.TABS.length, "combat") {
@@ -27,10 +19,10 @@ public class ItemTab {
 		}
 	};
 
-	public static final CreativeModeTab forage = new CreativeModeTab(CreativeModeTab.TABS.length, "forage") {
+	public static final CreativeModeTab farm = new CreativeModeTab(CreativeModeTab.TABS.length, "farm") {
 		@Override
 		public ItemStack makeIcon() {
-			return new ItemStack(Items.DARK_OAK_SAPLING);
+			return new ItemStack(Items.GOLDEN_HOE);
 		}
 	};
 
@@ -41,10 +33,18 @@ public class ItemTab {
 		}
 	};
 
-	public static final CreativeModeTab boss = new CreativeModeTab(CreativeModeTab.TABS.length, "boss") {
+	public static final CreativeModeTab forage = new CreativeModeTab(CreativeModeTab.TABS.length, "forage") {
 		@Override
 		public ItemStack makeIcon() {
-			return new ItemStack(Items.WITHER_SKELETON_SKULL);
+			return new ItemStack(Items.DARK_OAK_SAPLING);
 		}
+	};
+
+	public static final CreativeModeTab mine = new CreativeModeTab(CreativeModeTab.TABS.length, "mine") {
+		@Override
+		public ItemStack makeIcon() {
+			return new ItemStack(Items.STONE_PICKAXE);
+		}
+
 	};
 }

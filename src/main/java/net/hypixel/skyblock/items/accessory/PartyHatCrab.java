@@ -24,9 +24,9 @@ import net.minecraft.world.level.Level;
  * @author MrPineapple070
  * @version 27 July 2020
  */
-public class PartyHatCrab extends AccessoryItem{
-	private static final Component info = Component.translatable("accessory.party_hat",
-			StatString.intelligence).withStyle(ChatFormatting.GRAY);
+public class PartyHatCrab extends AccessoryItem {
+	private static final Component info = Component.translatable("accessory.party_hat", StatString.intelligence)
+			.withStyle(ChatFormatting.GRAY);
 
 	/**
 	 * The {@link DyeColor} of this.
@@ -36,7 +36,7 @@ public class PartyHatCrab extends AccessoryItem{
 	/**
 	 * @param color {@link DyeColor} for this.
 	 */
-	public PartyHatCrab(DyeColor color) {
+	public PartyHatCrab(final DyeColor color) {
 		super(ItemProperties.combat_1, Rarity.Common);
 		switch (Objects.requireNonNull(color, "Must have a color.")) {
 		case RED:
@@ -54,9 +54,10 @@ public class PartyHatCrab extends AccessoryItem{
 			throw new IllegalArgumentException("Illegal color: " + color);
 		}
 	}
-	
+
 	@Override
-	public void appendHoverText(ItemStack stack, Level level, List<Component> tooltip, TooltipFlag flag) {
+	public void appendHoverText(final ItemStack stack, final Level level, final List<Component> tooltip,
+			final TooltipFlag flag) {
 		tooltip.add(info);
 	}
 
@@ -68,6 +69,7 @@ public class PartyHatCrab extends AccessoryItem{
 	}
 
 	@Override
-	public void inventoryTick(ItemStack stack, Level level, Entity entity, int slot, boolean selected) {
+	public void inventoryTick(final ItemStack stack, final Level level, final Entity entity, final int slot,
+			final boolean selected) {
 	}
 }

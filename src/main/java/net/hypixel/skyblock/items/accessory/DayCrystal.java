@@ -18,15 +18,14 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 
 /**
- * An {@link Accessory} that empowers the {@link Player} during the
- * day.<br>
+ * An {@link Accessory} that empowers the {@link Player} during the day.<br>
  * <a href="https://hypixel-skyblock.fandom.com/wiki/Day_Crystal">Day
  * Crystal</a>
  *
  * @author MrPineapple070
  * @version 18 May 2020
  */
-public class DayCrystal extends AccessoryItem{
+public class DayCrystal extends AccessoryItem {
 	/**
 	 * An {@link AttributeModifier} that increases {@link Attributes#ATTACK_DAMAGE}
 	 * by 10.
@@ -34,32 +33,32 @@ public class DayCrystal extends AccessoryItem{
 	private static final AttributeModifier attack_mod = new AttributeModifier(
 			Attributes.ATTACK_DAMAGE.getDescriptionId(), 0xA, Operation.ADDITION);
 
-	private static final Component info = Component.translatable("accessory.day_crystal",
-			StatString.strength, StatString.defense).withStyle(ChatFormatting.GRAY);
-
 	/**
 	 * An {@link AttributeModifier} that increases {@link Attributes#ARMOR} by 10.
 	 */
 	private static final AttributeModifier defense_mod = new AttributeModifier(Attributes.ARMOR.getDescriptionId(), 0xA,
 			Operation.ADDITION);
 
+	private static final Component info = Component
+			.translatable("accessory.day_crystal", StatString.strength, StatString.defense)
+			.withStyle(ChatFormatting.GRAY);
+
 	public DayCrystal() {
 		super(ItemProperties.mine_1, Rarity.Rare);
 	}
 
 	@Override
-	public void appendHoverText(ItemStack stack, Level worldIn, List<Component> tooltip, TooltipFlag flagIn) {
+	public void appendHoverText(final ItemStack stack, final Level worldIn, final List<Component> tooltip,
+			final TooltipFlag flagIn) {
 		tooltip.add(info);
 	}
 
 	@Override
-	public void inventoryTick(ItemStack stack, Level worldIn, Entity entityIn, int itemSlot, boolean isSelected) {
-		if (worldIn.isClientSide)
+	public void inventoryTick(final ItemStack stack, final Level worldIn, final Entity entityIn, final int itemSlot,
+			final boolean isSelected) {
+		if (worldIn.isClientSide || worldIn.isNight())
 			return;
-		if (worldIn.isNight())
-			return;
-		if (entityIn instanceof Player) {
-			final Player player = (Player) entityIn;
+		if (entityIn instanceof Player player) {
 			final AttributeInstance atk_dmg = player.getAttribute(Attributes.ATTACK_DAMAGE);
 			final AttributeInstance def = player.getAttribute(Attributes.ARMOR);
 			atk_dmg.addTransientModifier(attack_mod);

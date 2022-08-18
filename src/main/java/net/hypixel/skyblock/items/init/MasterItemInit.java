@@ -15,7 +15,7 @@ public class MasterItemInit {
 		Objects.requireNonNull(bus, "IEventBus cannot be null");
 
 		SkyblockMod.LOGGER.debug("Registering items");
-		ItemInit.ITEMS.register(bus);
+		BaitInit.BAIT.register(bus);
 		EnchantedItemInit.ITEMS.register(bus);
 		GemstoneInit.GEMSTONE.register(bus);
 		TrophyFishInit.FISH.register(bus);

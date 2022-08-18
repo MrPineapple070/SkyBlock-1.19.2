@@ -17,7 +17,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 
-public class NightCrystal extends AccessoryItem{
+public class NightCrystal extends AccessoryItem {
 	/**
 	 * An {@link AttributeModifier} that increases {@link Attributes#ATTACK_DAMAGE}
 	 * by 0xA.
@@ -31,26 +31,26 @@ public class NightCrystal extends AccessoryItem{
 	private static final AttributeModifier defense_mod = new AttributeModifier(Attributes.ARMOR.getDescriptionId(), 0xA,
 			Operation.ADDITION);
 
-	private static final Component info = Component.translatable("accessory.night_crystal", StatString.strength,
-			StatString.defense).withStyle(ChatFormatting.GRAY);
+	private static final Component info = Component
+			.translatable("accessory.night_crystal", StatString.strength, StatString.defense)
+			.withStyle(ChatFormatting.GRAY);
 
 	public NightCrystal() {
 		super(ItemProperties.mine_1, Rarity.Rare);
 	}
 
 	@Override
-	public void appendHoverText(ItemStack stack, Level level, List<Component> tooltip, TooltipFlag flag) {
+	public void appendHoverText(final ItemStack stack, final Level level, final List<Component> tooltip,
+			final TooltipFlag flag) {
 		tooltip.add(info);
 	}
-	
+
 	@Override
-	public void inventoryTick(ItemStack stack, Level level, Entity entity, int slot, boolean selected) {
-		if (level.isClientSide)
+	public void inventoryTick(final ItemStack stack, final Level level, final Entity entity, final int slot,
+			final boolean selected) {
+		if (level.isClientSide || level.isDay())
 			return;
-		if (level.isDay())
-			return;
-		if (entity instanceof Player) {
-			final Player player = (Player) entity;
+		if (entity instanceof Player player) {
 			final AttributeInstance atk_dmg = player.getAttribute(Attributes.ATTACK_DAMAGE);
 			final AttributeInstance def = player.getAttribute(Attributes.ARMOR);
 			atk_dmg.addTransientModifier(attack_mod);
