@@ -1,5 +1,30 @@
 {
-	"homepage": "https://wiki.hypixel.net/Main_Page",
+	"homepage": "https://github.com/MrPineapple070/SkyBlock-1.19.2",
+	"1.19.2": {
+		"0.1.0": "https://hypixel.net/threads/2061182",
+		"0.2.0": "https://hypixel.net/threads/2088641",
+		"0.2.0-2019.06.17": "https://hypixel.net/threads/2097093",
+		"0.3.0": "https://hypixel.net/threads/2103642",
+		"0.3.0-2019.06.20": "https://hypixel.net/threads/2103830",
+		"0.4.0": "https://hypixel.net/threads/2118325",
+		"0.4.0-2019.06.29": "https://hypixel.net/threads/2125338",
+		"0.5.0": "https://hypixel.net/threads/2127882",
+		"0.5.0-2019.07.08": "https://hypixel.net/threads/2149097",
+		"0.6.0": "https://hypixel.net/threads/2149155",
+		"0.6.0-2019.07.11": "https://hypixel.net/threads/2157870",
+		"0.6.0-2019.07.12": "https://hypixel.net/threads/2161169",
+		"0.6.0-2019.07.15": "https://hypixel.net/threads/2168745",
+		"0.6.0-2019.07.19": "https://hypixel.net/threads/2178882",
+		"0.6.0-2019.07.21": "https://hypixel.net/threads/2184037",
+		"0.7.0": "https://hypixel.net/threads/2172962",
+		"0.7.0-2019.08.15": "https://hypixel.net/threads/2251153",
+		"0.7.0-2019.09.05": "https://hypixel.net/threads/2301598",
+		"0.7.0-2019.09.10": "https://hypixel.net/threads/2311548",
+		"0.7.1": https://hypixel.net/threads/2280493",
+		"0.7.1-2019.09.17": "https://hypixel.net/threads/2328030",
+		"0.14.0": "https://hypixel.net/threads/5074247",
+		"0.14.1": "https://hypixel.net/threads/5079442"
+	},
 	"promos": {
 		"1.19.2-latest": "0.14.1",
 		"1.19.2-recomended": "0.14.1"
