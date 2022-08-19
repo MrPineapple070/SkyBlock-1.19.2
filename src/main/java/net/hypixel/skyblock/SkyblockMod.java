@@ -18,6 +18,8 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 /**
  *
  * @author MrPineapple070
+ * @version 0.14.0 
+ * @since 0.1.0
  */
 @Mod(SkyblockMod.MODID)
 public class SkyblockMod {
@@ -25,9 +27,10 @@ public class SkyblockMod {
 	public static class ClientModEvents {
 		@SubscribeEvent
 		public static void onClientSetup(final FMLClientSetupEvent event) {
+			final Minecraft minecraft = Minecraft.getInstance();
 			// Some client setup code
 			LOGGER.info("HELLO FROM CLIENT SETUP");
-			LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
+			LOGGER.info("MINECRAFT NAME >> {}", minecraft.getUser().getName());
 		}
 	}
 

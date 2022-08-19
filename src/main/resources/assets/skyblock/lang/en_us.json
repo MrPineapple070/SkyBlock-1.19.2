@@ -8249,6 +8249,7 @@
 	"bait.spooky": "+15%% chance to catch spooky Sea Creatures and +15%% %s.",
 	"bait.whale": "Small chance to get double drops from items fished, higher chance to catch Rare Sea Creatures and 15%% %s.",
 	"bait.corrupted": "-50%% %s but lures a special Trophy Fish in the %s.",
+	"bait.hot": "Increase the chance to catch Trophy Fish by 5%.",
 	
 	"bow.ability": "Item Ability: ",
 
