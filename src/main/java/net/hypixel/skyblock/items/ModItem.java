@@ -1,10 +1,15 @@
 package net.hypixel.skyblock.items;
 
+import java.util.List;
+
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.enchantment.Enchantment;
+import net.minecraft.world.level.Level;
 
-public class ModItem extends Item {
+public abstract class ModItem extends Item {
 	/**
 	 * {@link Rarity} rarity of this
 	 */
@@ -19,6 +24,15 @@ public class ModItem extends Item {
 	public ModItem(final Item.Properties properties, final Rarity rarity) {
 		super(properties);
 		this.rarity = rarity;
+	}
+
+	@Override
+	public abstract void appendHoverText(final ItemStack stack, final Level level, final List<Component> tooltip,
+			final TooltipFlag flag);
+
+	@Override
+	public boolean canApplyAtEnchantingTable(final ItemStack stack, final Enchantment enchantment) {
+		return false;
 	}
 
 	@Override

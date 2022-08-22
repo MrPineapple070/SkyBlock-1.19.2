@@ -1,5 +1,4 @@
 /**
- * Holds everything related to
- * {@link net.hypixel.skyblock.items.accessory.Accessory}
+ * Package for {@link net.hypixel.skyblock.items.accessory.AccessoryItem}
  */
 package net.hypixel.skyblock.items.accessory;

@@ -1,0 +1,11 @@
+{
+    "type": "skyblock:enchanted_item",
+    "input": {
+		"item": "minecraft:cobblestone",
+		"count": 32
+    },
+    "output": {
+        "item": "skyblock:enchanted_cobblestone",
+        "count": 1
+    }
+}
