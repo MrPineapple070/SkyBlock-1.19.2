@@ -12,21 +12,42 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 
 /**
- * An {@link Accessory} that saves the players held coins when dying.<br>
- * <a href="https://hypixel-skyblock.fandom.com/wiki/Piggy_Bank">Piggy Bank</a>
+ * An {@link AccessoryItem} that saves the players held coins when dying.<br>
+ * <a href="https://wiki.hypixel.net/Piggy_Bank">Piggy Bank</a>
  *
  * @author MrPineapple070
- * @version 28 July 2020
+ * @version 4 December 2019
+ * @since 11 June 2019
  */
 public class PiggyBank extends AccessoryItem {
+	/**
+	 * The State of the piggy bank
+	 * 
+	 * @author MrPineapple070
+	 * @version 4 December 2019
+	 * @since 11 June 2019
+	 */
 	public enum State {
+		@Deprecated
 		Broken, Cracked, Normal;
 	}
 
+	/**
+	 * Component holding how much a {@link State#Normal} will save
+	 */
 	private static final Component percent0 = Component.translatable("accessory.piggy.0")
 			.withStyle(ChatFormatting.GRAY);
+
+	/**
+	 * Component holding how much a {@link State#Cracked} will save
+	 */
 	private static final Component percent1 = Component.translatable("accessory.piggy.1")
 			.withStyle(ChatFormatting.GRAY);
+
+	/**
+	 * Component holding how much a {@link State#Broken} will save
+	 */
+	@Deprecated
 	private static final Component percent2 = Component.translatable("accessory.piggy.2")
 			.withStyle(ChatFormatting.GRAY);
 
@@ -62,10 +83,16 @@ public class PiggyBank extends AccessoryItem {
 			final boolean selected) {
 	}
 
+	/**
+	 * Sets {@link #state} to {@link State#Normal}
+	 */
 	public void repair() {
 		this.state = State.Normal;
 	}
 
+	/**
+	 * Advances {@link #state} to the next one
+	 */
 	public void use() {
 		switch (this.state) {
 		case Normal:
@@ -76,5 +103,10 @@ public class PiggyBank extends AccessoryItem {
 			return;
 		default:
 		}
+	}
+
+	@Override
+	protected ItemStack getUpgrade() {
+		return ItemStack.EMPTY;
 	}
 }

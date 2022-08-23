@@ -2,6 +2,10 @@ package net.hypixel.skyblock.items.accessory;
 
 import java.util.List;
 
+import javax.annotation.Nonnull;
+
+import org.openjdk.nashorn.internal.ir.annotations.Immutable;
+
 import net.hypixel.skyblock.items.Rarity;
 import net.hypixel.skyblock.util.ItemProperties;
 import net.hypixel.skyblock.util.StatString;
@@ -16,16 +20,25 @@ import net.minecraft.world.level.biome.Biome;
 /**
  * Increases <font style="color:#FFFFFF">Speed</font> by 10% while in certain
  * {@link Biome}.<br>
- * <a href="https://hypixel-skyblock.fandom.com/wiki/Farming_Talisman">Farming
- * Talisman</a>
+ * <a href="https://wiki.hypixel.net/Farming_Talisman">Farming Talisman</a>
  *
  * @author MrPineapple070
- * @version 26 July 2020
+ * @version 11 June 2019
+ * @since 11 June 2019
  */
 public class FarmingTalisman extends AccessoryItem {
+	/**
+	 * {@link Component} to append using
+	 * {@link #appendHoverText(ItemStack, Level, List, TooltipFlag)}
+	 */
+	@Nonnull
+	@Immutable
 	private static final Component info = Component.translatable("accessory.farming_talisman", StatString.speed)
 			.withStyle(ChatFormatting.GRAY);
 
+	/**
+	 * Constructor
+	 */
 	public FarmingTalisman() {
 		super(ItemProperties.farm_1, Rarity.Common);
 	}
@@ -39,5 +52,10 @@ public class FarmingTalisman extends AccessoryItem {
 	@Override
 	public void inventoryTick(final ItemStack stack, final Level level, final Entity entity, final int slot,
 			final boolean selected) {
+	}
+
+	@Override
+	protected ItemStack getUpgrade() {
+		return ItemStack.EMPTY;
 	}
 }

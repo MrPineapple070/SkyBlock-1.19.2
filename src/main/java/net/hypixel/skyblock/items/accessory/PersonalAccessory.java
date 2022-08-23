@@ -6,14 +6,19 @@ import java.util.Objects;
 import javax.annotation.Nonnull;
 
 import net.hypixel.skyblock.items.Rarity;
-import net.hypixel.skyblock.items.accessory.PersonalCompactor.PersonalComp4000;
-import net.hypixel.skyblock.items.accessory.PersonalCompactor.PersonalComp5000;
-import net.hypixel.skyblock.items.accessory.PersonalCompactor.PersonalComp6000;
+import net.hypixel.skyblock.util.ItemProperties;
 import net.hypixel.skyblock.util.ItemStackHelper;
 import net.minecraft.core.NonNullList;
 import net.minecraft.world.item.ItemStack;
 
 public abstract class PersonalAccessory extends AccessoryItem {
+	/**
+	 * How many items these {@link AccessoryItem} will interact with
+	 * 
+	 * @author MrPineapple070
+	 * @version 3 December 2020
+	 * @since 7 June 2020
+	 */
 	public enum Type {
 		Type4, Type5, Type6, Type7;
 	}
@@ -25,15 +30,19 @@ public abstract class PersonalAccessory extends AccessoryItem {
 	public final NonNullList<ItemStack> items;
 
 	/**
-	 * An int that differentiates {@link PersonalComp4000},
-	 * {@link PersonalComp5000}, and {@link PersonalComp6000}.<br>
-	 * This value is expected to be 0xFA0 (4000), 0x1388 (5000), or 0x1770 (6000).
+	 * {@link Type} to distinguish between different types
 	 */
 	@Nonnull
 	protected final Type type;
 
-	public PersonalAccessory(final Properties properties, final Rarity rarity, final Type type) {
-		super(properties, rarity);
+	/**
+	 * Constructor
+	 * 
+	 * @param rarity {@link Rarity}
+	 * @param type   {@link Type}
+	 */
+	public PersonalAccessory(final Rarity rarity, final Type type) {
+		super(ItemProperties.mine_1, rarity);
 		this.type = Objects.requireNonNull(type, "PersonalAccessory.Type cannot be null");
 		switch (this.type) {
 		case Type4:

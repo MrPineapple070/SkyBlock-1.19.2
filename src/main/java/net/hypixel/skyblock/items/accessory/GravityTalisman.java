@@ -2,6 +2,10 @@ package net.hypixel.skyblock.items.accessory;
 
 import java.util.List;
 
+import javax.annotation.Nonnull;
+
+import org.openjdk.nashorn.internal.ir.annotations.Immutable;
+
 import net.hypixel.skyblock.items.Rarity;
 import net.hypixel.skyblock.util.ItemProperties;
 import net.hypixel.skyblock.util.StatString;
@@ -16,18 +20,28 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.storage.LevelData;
 
 /**
- * An {@link Accessory} that increases
+ * An {@link AccessoryItem} that increases
  * <font style="color:#e73c3c">Strength</font> and
  * <font style="color:#00d400">Defense</font> depending on the Player's
  * proximity to spawn.
  *
  * @author MrPineapple070
- * @version 25 July 2020
+ * @version 11 June 2019
+ * @since 11 June 2019
  */
 public class GravityTalisman extends AccessoryItem {
+	/**
+	 * {@link Component} to append using
+	 * {@link #appendHoverText(ItemStack, Level, List, TooltipFlag)}
+	 */
+	@Nonnull
+	@Immutable
 	private static final Component info = Component
 			.translatable("accessory.gravity", StatString.strength, StatString.defense).withStyle(ChatFormatting.GRAY);
 
+	/**
+	 * Constructor
+	 */
 	public GravityTalisman() {
 		super(ItemProperties.mine_1, Rarity.Uncommon);
 	}
@@ -43,9 +57,16 @@ public class GravityTalisman extends AccessoryItem {
 			final boolean selected) {
 		if (level.isClientSide || !(entity instanceof Player))
 			return;
+		if (!(entity instanceof final Player player))
+			return;
 		final LevelData data = level.getLevelData();
-		final Player player = (Player) entity;
 		final BlockPos spawn = new BlockPos(data.getXSpawn(), data.getYSpawn(), data.getZSpawn());
-		spawn.distSqr(player.blockPosition());
+		final double dist = spawn.distSqr(player.blockPosition());
+		logger.info("Distance:\t" + dist);
+	}
+
+	@Override
+	protected ItemStack getUpgrade() {
+		return ItemStack.EMPTY;
 	}
 }

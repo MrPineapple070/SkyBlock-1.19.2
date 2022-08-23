@@ -3,6 +3,10 @@ package net.hypixel.skyblock.items.accessory;
 import java.util.List;
 import java.util.Objects;
 
+import javax.annotation.Nonnull;
+
+import org.openjdk.nashorn.internal.ir.annotations.Immutable;
+
 import net.hypixel.skyblock.items.Rarity;
 import net.hypixel.skyblock.util.ItemProperties;
 import net.hypixel.skyblock.util.StatString;
@@ -15,16 +19,21 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 
 /**
- * An {@link Accessory} that grants +1
+ * An {@link AccessoryItem} that grants +1
  * <font style="color:#55FFFF">Intelligence</font> per in-game year played.<Br>
- * <a href=
- * "https://hypixel-skyblock.fandom.com/wiki/Crab_Hat_of_Celebration">Crab Hat
- * of Celebration</a>
+ * <a href= "https://wiki.hypixel.net/Crab_Hat_of_Celebration">Crab Hat of
+ * Celebration</a>
  *
  * @author MrPineapple070
  * @version 27 July 2020
  */
 public class PartyHatCrab extends AccessoryItem {
+	/**
+	 * {@link Component} to append using
+	 * {@link #appendHoverText(ItemStack, Level, List, TooltipFlag)}
+	 */
+	@Nonnull
+	@Immutable
 	private static final Component info = Component.translatable("accessory.party_hat", StatString.intelligence)
 			.withStyle(ChatFormatting.GRAY);
 
@@ -34,6 +43,8 @@ public class PartyHatCrab extends AccessoryItem {
 	private final DyeColor color;
 
 	/**
+	 * Constructor
+	 * 
 	 * @param color {@link DyeColor} for this.
 	 */
 	public PartyHatCrab(final DyeColor color) {
@@ -71,5 +82,10 @@ public class PartyHatCrab extends AccessoryItem {
 	@Override
 	public void inventoryTick(final ItemStack stack, final Level level, final Entity entity, final int slot,
 			final boolean selected) {
+	}
+
+	@Override
+	protected ItemStack getUpgrade() {
+		return ItemStack.EMPTY;
 	}
 }

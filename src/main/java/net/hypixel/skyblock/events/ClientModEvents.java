@@ -13,18 +13,26 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
  * Handles {@link FMLClientSetupEvent} for {@link SkyblockMod}
  * 
  * @author MrPineapple070
- * @version 0.14.0
- * @since 0.1.0
+ * @version 11 June 2019
+ * @since 11 June 2019
  */
 @Mod.EventBusSubscriber(modid = SkyblockMod.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ClientModEvents {
+	/**
+	 * Direct reference to {@link Logger}.
+	 */
 	protected static final Logger LOGGER = LogManager.getLogger();
 
+	/**
+	 * This method is called upon {@link FMLClientSetupEvent}
+	 * 
+	 * @param event {@link FMLClientSetupEvent}
+	 */
 	@SubscribeEvent
 	public static void onClientSetup(final FMLClientSetupEvent event) {
 		final Minecraft minecraft = Minecraft.getInstance();
 		// Some client setup code
 		LOGGER.info("HELLO FROM CLIENT SETUP");
-		LOGGER.info("MINECRAFT NAME >> {}", minecraft.getUser().getName());
+		LOGGER.info("MINECRAFT USER NAME >> {}", minecraft.getUser().getName());
 	}
 }

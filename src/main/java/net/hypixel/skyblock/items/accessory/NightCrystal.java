@@ -2,6 +2,10 @@ package net.hypixel.skyblock.items.accessory;
 
 import java.util.List;
 
+import javax.annotation.Nonnull;
+
+import org.openjdk.nashorn.internal.ir.annotations.Immutable;
+
 import net.hypixel.skyblock.items.Rarity;
 import net.hypixel.skyblock.util.ItemProperties;
 import net.hypixel.skyblock.util.StatString;
@@ -17,6 +21,14 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 
+/**
+ * An {@link AccessoryItem} that increases Strength and Defense by 5% during the
+ * Night
+ * 
+ * @author MrPineapple070
+ * @version 11 June 2019
+ * @since 11 June 2019
+ */
 public class NightCrystal extends AccessoryItem {
 	/**
 	 * An {@link AttributeModifier} that increases {@link Attributes#ATTACK_DAMAGE}
@@ -31,10 +43,19 @@ public class NightCrystal extends AccessoryItem {
 	private static final AttributeModifier defense_mod = new AttributeModifier(Attributes.ARMOR.getDescriptionId(), 0xA,
 			Operation.ADDITION);
 
+	/**
+	 * {@link Component} to append using
+	 * {@link #appendHoverText(ItemStack, Level, List, TooltipFlag)}
+	 */
+	@Nonnull
+	@Immutable
 	private static final Component info = Component
 			.translatable("accessory.night_crystal", StatString.strength, StatString.defense)
 			.withStyle(ChatFormatting.GRAY);
 
+	/**
+	 * Constructor
+	 */
 	public NightCrystal() {
 		super(ItemProperties.mine_1, Rarity.Rare);
 	}
@@ -56,5 +77,10 @@ public class NightCrystal extends AccessoryItem {
 			atk_dmg.addTransientModifier(attack_mod);
 			def.addTransientModifier(defense_mod);
 		}
+	}
+
+	@Override
+	protected ItemStack getUpgrade() {
+		return ItemStack.EMPTY;
 	}
 }

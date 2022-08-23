@@ -7,7 +7,12 @@ import net.hypixel.skyblock.items.accessory.BatArtifact;
 import net.hypixel.skyblock.items.accessory.BatRing;
 import net.hypixel.skyblock.items.accessory.BatTalisman;
 import net.hypixel.skyblock.items.accessory.CampfireTalisman.CampfireTalisman0;
+import net.hypixel.skyblock.items.accessory.CampfireTalisman.CampfireTalisman1;
+import net.hypixel.skyblock.items.accessory.CampfireTalisman.CampfireTalisman2;
+import net.hypixel.skyblock.items.accessory.CampfireTalisman.CampfireTalisman3;
+import net.hypixel.skyblock.items.accessory.CampfireTalisman.CampfireTalisman4;
 import net.hypixel.skyblock.items.accessory.CandyArtifact;
+import net.hypixel.skyblock.items.accessory.CandyRelic;
 import net.hypixel.skyblock.items.accessory.CandyRing;
 import net.hypixel.skyblock.items.accessory.CandyTalisman;
 import net.hypixel.skyblock.items.accessory.CatTalisman;
@@ -79,6 +84,7 @@ import net.hypixel.skyblock.items.accessory.SpeedTalisman;
 import net.hypixel.skyblock.items.accessory.SpiderArtifact;
 import net.hypixel.skyblock.items.accessory.SpiderRing;
 import net.hypixel.skyblock.items.accessory.SpiderTalisman;
+import net.hypixel.skyblock.items.accessory.SpikedAtrocity;
 import net.hypixel.skyblock.items.accessory.SurvivorCube;
 import net.hypixel.skyblock.items.accessory.TarantulaTalisman;
 import net.hypixel.skyblock.items.accessory.TreasureArtifact;
@@ -97,6 +103,7 @@ import net.hypixel.skyblock.items.accessory.WeddingRing.WeddingRing7;
 import net.hypixel.skyblock.items.accessory.WeddingRing.WeddingRing8;
 import net.hypixel.skyblock.items.accessory.WeddingRing.WeddingRing9;
 import net.hypixel.skyblock.items.accessory.WitherArtifact;
+import net.hypixel.skyblock.items.accessory.WitherRelic;
 import net.hypixel.skyblock.items.accessory.WolfPaw;
 import net.hypixel.skyblock.items.accessory.WolfRing;
 import net.hypixel.skyblock.items.accessory.WolfTalisman;
@@ -122,9 +129,19 @@ public class AccessoryInit {
 			BatTalisman::new);
 	public static final RegistryObject<AccessoryItem> campfire_talisman_0 = ACCESSORIES.register("campfire_talisman_0",
 			CampfireTalisman0::new);
+	public static final RegistryObject<AccessoryItem> campfire_talisman_1 = ACCESSORIES.register("campfire_talisman_1",
+			CampfireTalisman1::new);
+	public static final RegistryObject<AccessoryItem> campfire_talisman_2 = ACCESSORIES.register("campfire_talisman_2",
+			CampfireTalisman2::new);
+	public static final RegistryObject<AccessoryItem> campfire_talisman_3 = ACCESSORIES.register("campfire_talisman_3",
+			CampfireTalisman3::new);
+	public static final RegistryObject<AccessoryItem> campfire_talisman_4 = ACCESSORIES.register("campfire_talisman_4",
+			CampfireTalisman4::new);
 	public static final RegistryObject<AccessoryItem> candy_artifact = ACCESSORIES.register("candy_artifact",
 			CandyArtifact::new);
 	public static final RegistryObject<AccessoryItem> candy_ring = ACCESSORIES.register("candy_ring", CandyRing::new);
+	public static final RegistryObject<AccessoryItem> candy_relic = ACCESSORIES.register("candy_relic",
+			CandyRelic::new);
 	public static final RegistryObject<AccessoryItem> candy_talisman = ACCESSORIES.register("candy_talisman",
 			CandyTalisman::new);
 	public static final RegistryObject<AccessoryItem> cat_talisman = ACCESSORIES.register("cat_talisman",
@@ -275,6 +292,8 @@ public class AccessoryInit {
 			SpiderRing::new);
 	public static final RegistryObject<AccessoryItem> spider_talisman = ACCESSORIES.register("spider_talisman",
 			SpiderTalisman::new);
+	public static final RegistryObject<AccessoryItem> spiked_atrocity = ACCESSORIES.register("spiked_atrocity",
+			SpikedAtrocity::new);
 	public static final RegistryObject<AccessoryItem> survivor_cube = ACCESSORIES.register("survivor_cube",
 			SurvivorCube::new);
 	public static final RegistryObject<AccessoryItem> tarantula_talisman = ACCESSORIES.register("tarantula_talisman",
@@ -311,6 +330,8 @@ public class AccessoryInit {
 			WeddingRing9::new);
 	public static final RegistryObject<AccessoryItem> wither_artifact = ACCESSORIES.register("wither_artifact",
 			WitherArtifact::new);
+	public static final RegistryObject<AccessoryItem> wither_relic = ACCESSORIES.register("wither_relic",
+			WitherRelic::new);
 	public static final RegistryObject<AccessoryItem> wolf_paw = ACCESSORIES.register("wolf_paw", WolfPaw::new);
 	public static final RegistryObject<AccessoryItem> wolf_ring = ACCESSORIES.register("wolf_ring", WolfRing::new);
 	public static final RegistryObject<AccessoryItem> wolf_talisman = ACCESSORIES.register("wolf_talisman",

@@ -2,6 +2,7 @@ package net.hypixel.skyblock.items;
 
 import java.util.List;
 
+import net.hypixel.skyblock.SkyblockMod;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -9,6 +10,14 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.level.Level;
 
+/**
+ * Base {@link Item} class for {@link SkyblockMod}.<br>
+ * Adds a {@link Rarity} to each item that effects {@link #getName(ItemStack)}
+ * 
+ * @author MrPineapple070
+ * @version 11 June 2019
+ * @since 11 June 2019
+ */
 public abstract class ModItem extends Item {
 	/**
 	 * {@link Rarity} rarity of this

@@ -6,6 +6,8 @@ import javax.annotation.concurrent.Immutable;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
 
 /**
  * Holds commonly used {@link String} and {@link TranslatableComponent}
@@ -129,6 +131,16 @@ public final class StatString {
 	public static final MutableComponent true_def = Component.translatable("stat.true_defense")
 			.withStyle(ChatFormatting.WHITE);
 
+	public static final MutableComponent vitality = Component.translatable("stat.vitality")
+			.withStyle(ChatFormatting.DARK_RED);
+
+	/**
+	 * Constructs a {@link Component} to append using
+	 * {@link Item#getName(net.minecraft.world.item.ItemStack)}
+	 * 
+	 * @param value how many times an {@link Item} has been upgraded
+	 * @return constructed {@link Component}
+	 */
 	public static Component dungeon(final int value) {
 		if (value < 0 || value > 14)
 			throw new IllegalArgumentException("Illegal essence value:\t" + value);
@@ -149,11 +161,26 @@ public final class StatString {
 				.append(Component.literal(gold_star).withStyle(ChatFormatting.GOLD));
 	}
 
+	/**
+	 * Constructs a {@link Component} indicated how much Mithril or Crystal Powder a
+	 * {@link Player} has
+	 * 
+	 * @param powder  the amount of powder a {@link Player} has
+	 * @param mithril determine if mithril or crystal powder is being constructed
+	 * @return constructed {@link Component}
+	 */
 	public static Component powder(final int powder, final boolean mithril) {
 		return Component.literal(String.format("\u1808 %d", powder))
 				.withStyle(mithril ? ChatFormatting.GREEN : ChatFormatting.LIGHT_PURPLE);
 	}
 
+	/**
+	 * Constructs a {@link Component} to display how many tickers an {@link Item}
+	 * has
+	 * 
+	 * @param ticker amount of tickers
+	 * @return constructed {@link Component}
+	 */
 	public static Component ticker(final int ticker) {
 		return Component.literal(String.format("%d " + SpecialCharacters.ticker, ticker))
 				.withStyle(ChatFormatting.YELLOW);

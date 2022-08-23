@@ -5,6 +5,8 @@ import java.util.List;
 
 import javax.annotation.Nonnull;
 
+import org.openjdk.nashorn.internal.ir.annotations.Immutable;
+
 import com.google.common.collect.ImmutableList;
 
 import net.hypixel.skyblock.items.Rarity;
@@ -23,27 +25,42 @@ import net.minecraft.world.level.block.BonemealableBlock;
 import net.minecraft.world.level.block.state.BlockState;
 
 /**
- * An {@link Accessory} that increases the regrowth rate of nearby crops.<br>
- * <a href="https://hypixel-skyblock.fandom.com/wiki/Farmer_Orb">Farmer Orb</a>
+ * An {@link AccessoryItem} that increases the regrowth rate of nearby crops.<br>
+ * <a href="https://wiki.hypixel.net/Farmer_Orb">Farmer Orb</a>
  *
  * @author MrPineapple070
- * @version 25 July 2020
+ * @version 11 June 2019
+ * @since 11 June 2019
  */
 public class FarmerOrb extends AccessoryItem {
-	private static final ImmutableList<Integer> dx = ImmutableList
-			.copyOf(Arrays.asList(-8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7));
-	private static final ImmutableList<Integer> dy = ImmutableList
-			.copyOf(Arrays.asList(-8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7));
-	private static final ImmutableList<Integer> dz = ImmutableList
+	/**
+	 * {@link ImmutableList} of {@link Integer}
+	 */
+	private static final ImmutableList<Integer> offset = ImmutableList
 			.copyOf(Arrays.asList(-8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7));
 
+	/**
+	 * {@link Component} to append using
+	 * {@link #appendHoverText(ItemStack, Level, List, TooltipFlag)}
+	 */
+	@Nonnull
+	@Immutable
 	private static final Component info = Component.translatable("accessory.farmer_orb").withStyle(ChatFormatting.GRAY);
 
+	/**
+	 * 3d-array of {@link BlockPos} when centered at {@link Player}
+	 */
 	private final BlockPos[][][] nearby = new BlockPos[16][16][16];
 
+	/**
+	 * {@link BlockPos} of {@link Player#blockPosition()}
+	 */
 	@Nonnull
 	private BlockPos pos;
 
+	/**
+	 * Constructor
+	 */
 	public FarmerOrb() {
 		super(ItemProperties.farm_1, Rarity.Uncommon);
 		this.pos = BlockPos.ZERO;
@@ -58,7 +75,9 @@ public class FarmerOrb extends AccessoryItem {
 	@Override
 	public void inventoryTick(final ItemStack stack, final Level level, final Entity entity, final int slot,
 			final boolean selected) {
-		if (!(level instanceof ServerLevel) || !(entity instanceof Player player))
+		if (!(level instanceof final ServerLevel server))
+			return;
+		if (!(entity instanceof final Player player))
 			return;
 		if (!player.blockPosition().equals(this.pos))
 			this.setNearby(player);
@@ -72,17 +91,26 @@ public class FarmerOrb extends AccessoryItem {
 					final Block block = state.getBlock();
 					if (state.isAir())
 						continue;
-					if (block instanceof BonemealableBlock)
-						((BonemealableBlock) block).performBonemeal((ServerLevel) level, level.random, pos, state);
+					if (block instanceof final BonemealableBlock bone)
+						bone.performBonemeal(server, level.random, pos, state);
 				}
 	}
 
+	/**
+	 * Modifies {@link #nearby}
+	 * 
+	 * @param player {@link Player}
+	 */
 	private void setNearby(final Player player) {
 		this.pos = player.blockPosition();
-		for (int i = 0; i < this.nearby.length; i++)
-			for (int j = 0; j < this.nearby[i].length; j++)
-				for (int k = 0; k < this.nearby[i][j].length; k++)
-					this.nearby[i][j][k] = new BlockPos(this.pos.getX() + dx.get(j), this.pos.getY() + dy.get(i),
-							this.pos.getZ() + dz.get(k));
+		for (int i = 0; i < this.nearby.length; ++i)
+			for (int j = 0; j < this.nearby[i].length; ++j)
+				for (int k = 0; k < this.nearby[i][j].length; ++k)
+					this.nearby[i][j][k] = this.pos.offset(offset.get(j), offset.get(i), offset.get(k));
+	}
+
+	@Override
+	protected ItemStack getUpgrade() {
+		return ItemStack.EMPTY;
 	}
 }

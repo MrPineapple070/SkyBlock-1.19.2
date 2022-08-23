@@ -7,7 +7,19 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 
+/**
+ * A specific type of {@link ModItem} that applies the enchantment glint to them
+ * 
+ * @author MrPineapple070
+ * @version 11 June 2019
+ * @since 11 June 2019
+ */
 public class EnchantedItem extends ModItem {
+	/**
+	 * Constructor
+	 * 
+	 * @param properties {@link Properties} of this Item
+	 */
 	public EnchantedItem(final Properties properties) {
 		super(properties, Rarity.Uncommon);
 	}
